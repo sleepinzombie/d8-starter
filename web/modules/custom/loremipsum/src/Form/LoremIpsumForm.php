@@ -4,6 +4,14 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 class LoremIpsumForm extends ConfigFormBase {
+
+    /**
+    * {@inheritdoc}
+    */
+    public function getFormId() {
+        return 'loremipsum_form';
+    }
+
     public function buildForm(array $form, FormStateInterface $form_state) {
         $form = parent::buildForm($form, $form_state);
         $config = $this->config('loremipsum.settings');
@@ -27,7 +35,7 @@ class LoremIpsumForm extends ConfigFormBase {
         return $form;
     }
 
-    public function submitForm(array $form, FormStateInterface $form_state) {
+    public function submitForm(array &$form, FormStateInterface $form_state) {
         $config = $this->config('loremipsum.settings'); // Fetching settings
         // Setting the page title in settings from the value of the form
         $config->set('loremipsum.page_title', $form_state->getValue('page_title'));
@@ -37,7 +45,7 @@ class LoremIpsumForm extends ConfigFormBase {
         return parent::submitForm($form, $form_state); // Submitting the form
     }
 
-    public function validateForm(array $form, FormStateInterface $form_state) { }
+    public function validateForm(array &$form, FormStateInterface $form_state) { }
 
     public function getEditableConfigNames() {
         return ['loremipsum.settings'];

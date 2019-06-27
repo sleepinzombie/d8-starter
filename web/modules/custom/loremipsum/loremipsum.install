@@ -3,7 +3,7 @@
 use Drupal\user\RoleInterface;
 
 function loremipsum_install() {
-    user_role_change_permissions(RoleInterface::anonymous_id, array(
+    user_role_change_permissions(RoleInterface::ANONYMOUS_ID, array(
         'generate lorem ipsum' => TRUE,
     ));
 }

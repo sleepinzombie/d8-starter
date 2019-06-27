@@ -32,6 +32,17 @@ class ContributeForm extends FormBase {
       '#type' => 'textfield',
       '#title' => t('Description'),
     );
+
+    $form['actions'] = [
+      '#type' => 'actions',
+    ];
+
+    // Add a submit button that handles the submission of the form.
+    $form['actions']['submit'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Submit'),
+    ]; 
+
     return $form;
   }
 

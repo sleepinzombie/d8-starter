@@ -1,0 +1,6 @@
+name: Lorem Ipsum Module
+type: module
+description: 'A Lorem Ipsum module for testing / tutorial purpose.'
+package: Custom
+core: 8.x
+hidden: false

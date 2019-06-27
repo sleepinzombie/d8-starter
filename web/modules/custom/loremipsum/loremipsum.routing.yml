@@ -1,7 +1,7 @@
 loremipsum.generate:
   path: 'loremipsum/generate/{paragraphs}/{phrases}'
   defaults:
-    _controller: '\Drupal\loremipsum\Controller\LoremIpsumController::generate'
+    _controller: '\Drupal\loremipsum\Controller\LoremipsumController::generate'
   requirements:
     _permission: 'generate lorem ipsum'
 
