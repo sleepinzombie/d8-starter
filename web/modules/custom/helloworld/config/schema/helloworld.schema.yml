@@ -1,0 +1,7 @@
+helloworld.config:
+  type: config_object
+  label: 'Hello World config'
+  mapping:
+    message:
+      type: text
+      label: 'Message'

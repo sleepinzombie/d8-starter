@@ -1,0 +1,7 @@
+formexample.form:
+  path: '/contribute'
+  defaults:
+    _title: 'Conribute page'
+    _form: '\Drupal\formexample\Form\ContributeForm'
+  requirements:
+    _permission: 'access content'

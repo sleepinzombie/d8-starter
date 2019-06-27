@@ -1,0 +1,6 @@
+name: Example Form
+type: module
+description: 'An example of building a form.'
+package: Custom
+core: 8.x
+hidden: false
