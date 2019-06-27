@@ -1,0 +1,19 @@
+loremipsum.settings:
+  type: config_object
+  label: 'Lorem Ipsum Settings Label'
+  mapping:
+    loremipsum:
+      mapping:
+        page_title:
+          type: text
+          label: 'Lorem Ipsum Page Title Label'
+        source_text:
+          type: text
+          label: 'Lorem Ipsum Source Text Label'
+block.settings.loremipsum_block:
+  type: block_settings
+  label: 'Lorem Ipsum Block Label'
+  mapping:
+    loremipsum_block:
+      type: text
+      label: Lorem Ipsum Block Settings Label
