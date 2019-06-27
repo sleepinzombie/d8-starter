@@ -1,0 +1,8 @@
+
+loremipsum.example:
+  path: '/loremipsum/example'
+  defaults:
+    _title: 'Lorem Ipsum'
+    _controller: '\Drupal\loremipsum\Controller\LoremipsumController::build'
+  requirements:
+    _permission: 'access content'
