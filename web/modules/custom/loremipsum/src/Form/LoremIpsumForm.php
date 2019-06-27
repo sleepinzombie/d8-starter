@@ -1,5 +1,7 @@
 <?php
 
+namespace Drupal\loremipsum\Form;
+
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 

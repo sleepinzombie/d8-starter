@@ -1,0 +1,7 @@
+twigss.content:
+  path: '/test-var'
+  defaults:
+    _controller: '\Drupal\twigss\Controller\TestTwigController::content'
+    _title: 'Twig Template Testing'
+  requirements:
+    _permission: 'access content'

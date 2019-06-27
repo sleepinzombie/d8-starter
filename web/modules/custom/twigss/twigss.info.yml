@@ -1,0 +1,6 @@
+name: Twig Testing Template Module
+type: module
+description: 'A simple module to test if Twig templating is working.'
+package: Custom
+core: 8.x
+hidden: false
