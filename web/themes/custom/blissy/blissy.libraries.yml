@@ -1,0 +1,9 @@
+# blissy.libraries.yml file
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/styles.css: {}
+global-scripts:
+  js:
+    js/blissy.js: {}

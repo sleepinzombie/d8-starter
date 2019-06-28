@@ -51,6 +51,12 @@ class ContributeForm extends FormBase {
    * {@todo} Skipping for now
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
+    $value = $form_state->getValue('description');
+    if(strlen($value) > 10) {
+      dd('The description is too big, please decrease..');
+    } else {
+      dd('Okay');
+    }
   }
 
   /**
@@ -58,8 +64,21 @@ class ContributeForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     foreach ($form_state->getValues() as $key => $value) {
-      drupal_set_message($key . ': ' . $value);
+      drupal_set_message($key . ': ' . $value); // Simply displaying the submitted values to the user
     }
+  }
+
+  /**
+   * {@inheritdoc}
+   * Returning back to an existing precised URL.
+   */
+  public function getCancelUrl() {
+    return new Url('helloworld');
+  }
+
+  public function getQuestion() {
+    // return t('Do you want to delete %id?', ['%id' => $this->id]);
+    return t('Do you want to delete this? Duh, there is nothing here but it is fine.');
   }
 }
 ?>

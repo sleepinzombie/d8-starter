@@ -1,0 +1,14 @@
+name: Blissy Theme
+type: theme
+description: "A custom theme to testing theming on Drupal 8."
+core: 8.x
+libraries:
+  - blissy/global-styling
+  - blissy/global-scripts
+base theme: classy
+package: custom
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
