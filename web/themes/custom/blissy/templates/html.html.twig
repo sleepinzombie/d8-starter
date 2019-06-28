@@ -1,2 +1,14 @@
-{{ asset('css/styles.css') }}
-<p>This is a simple html file</p>
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+
+  <body>
+    <header>{{ page.header }}</header>
+    <section id="main-content">{{ page.content }}</section>
+    <footer>{{ page.footer }}</footer>
+  </body>
