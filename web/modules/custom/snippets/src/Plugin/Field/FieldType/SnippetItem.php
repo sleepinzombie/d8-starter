@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\snippets\Plugin\Field\SnippetItem;
+namespace Drupal\snippets\Plugin\Field\FieldType;
 
 use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
@@ -32,14 +32,16 @@ class SnippetItem extends FieldItemBase {
 
     public function isEmpty() {
         $value = $this->get('source_code')->getValue();
-        return $value === NULL || $value = '';
+        return $value === NULL || $value === '';
     }
 
     public function propertyDefinitions(FieldStorageDefinitionInterface $field_definition)
     {
-        $properties['source_description'] = DataDefinition::create('string')->setLabel(t('Source Descrption'));
-        $properties['source_code'] = DataDefinition::create('string')->setLabel(t('Source Code'));
-        $properties['source_lang'] = DataDefinition::create('string')->setLabel(t('Source Language'));
-        return $properties;
+      $properties = [];
+      $properties['source_description'] = DataDefinition::create('string')->setLabel(t('Source Description'));
+      $properties['source_code'] = DataDefinition::create('string')->setLabel(t('Source Code'));
+      $properties['source_lang'] = DataDefinition::create('string')->setLabel(t('Source Language'));
+
+      return $properties;
     }
 }

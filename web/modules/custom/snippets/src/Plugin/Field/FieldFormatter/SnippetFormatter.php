@@ -6,7 +6,7 @@
  * Drupal\MODULE_NAME\Plugin\Field\FieldType
  */
 
-namespace Drupal\snippets\Plugin\Field\SnippetFormatter;
+namespace Drupal\snippets\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;

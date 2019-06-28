@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\snippets\Plugin\Field\SnippetWidget;
+namespace Drupal\snippets\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
