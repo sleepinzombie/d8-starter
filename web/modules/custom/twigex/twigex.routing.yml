@@ -1,7 +1,7 @@
-twigex.content:
+twigex.twigex_controller_generate:
   path: '/twigex'
   defaults:
-    # _controller: '\Drupal\helloworld\Controller\HelloController::content'
-    _title: 'Hello Drupal'
+    _controller: '\Drupal\twigex\Controller\TwigexController::generate'
+    _title: 'Twigex'
   requirements:
     _permission: 'access content'
