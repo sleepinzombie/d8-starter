@@ -20,6 +20,8 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/bootstrap": "^3.20",
+        "drupal/bootstrap_library": "^1.11",
         "drupal/console": "~1.0",
         "drupal/core": "^8.7.0",
         "drupal/material_admin": "^1.0@alpha",

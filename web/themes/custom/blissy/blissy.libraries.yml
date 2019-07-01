@@ -8,3 +8,5 @@ global-scripts:
   version: 1.x
   js:
     js/blissy.js: {}
+  dependencies:
+    - core/jquery

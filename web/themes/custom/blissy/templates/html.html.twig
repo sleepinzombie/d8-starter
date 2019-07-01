@@ -8,7 +8,9 @@
   </head>
 
   <body>
-    <header>{{ page.header }}</header>
-    <section id="main-content">{{ page.content }}</section>
-    <footer>{{ page.footer }}</footer>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token }}">
   </body>
+</html>
