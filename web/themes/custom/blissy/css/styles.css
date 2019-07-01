@@ -71,6 +71,8 @@ header .user-account-login > button.btn-user-login {
 }
 
 /* Twigex */
-section #twigex {
+section#twigex .simple-form {
     display: grid;
+    grid-auto-flow: row;
+    grid-gap: 10px;
 }

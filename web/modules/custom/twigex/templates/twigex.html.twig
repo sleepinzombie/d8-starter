@@ -1,4 +1,4 @@
-<section id="twigex">
+<section id="twigex" class="d-grid">
     <div class="wrapper">
         <h4 class="d-grid d-grid-center">Twig Example</h4>
         <div class="content-wrapper">
@@ -20,5 +20,21 @@
                 <li><a href={{ value[1] }}>{{ value[0] }}</a></li>
             {% endfor %}
         </ul>
+
+        <h6>Working with Macros in Twig Templates</h6>
+        {% macro input(name, value, type, size) %}
+            <input type="{{ type|default('text') }}" name="{{ name }}" value="{{ value|e }}" size="{{ size|default(20) }}" />
+        {% endmacro %}
+
+        <div class="simple-form">
+            <label>Your Name</label>
+            {{ _self.input('name', '', 'text', 20) }}
+
+            <label>Your Address</label>
+            {{ _self.input('address', '', 'text', 20) }}
+
+            <label>Your Contact Number</label>
+            {{ _self.input('contact', '', 'text', 8) }}
+        </div>
     </div>
 </section>
