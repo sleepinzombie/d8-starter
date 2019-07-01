@@ -6,12 +6,19 @@
             Lorem Ipsum est un texte d'espace réservé couramment utilisé dans les industries graphique, imprimée et éditoriale pour prévisualiser les mises en page et les maquettes visuelles.</p>
         </div>
 
-        <h6>Test Variables</h6>
+        <h6 class="d-grid d-grid-center">Test Variables</h6>
         <div>{{ content }}</div>
 
         <div class="content-wrapper">
             <p>Lorem Ipsum est un texte d'espace réservé couramment utilisé dans les industries graphique, imprimée et éditoriale pour prévisualiser les mises en page et les maquettes visuelles.
             Lorem Ipsum est un texte d'espace réservé couramment utilisé dans les industries graphique, imprimée et éditoriale pour prévisualiser les mises en page et les maquettes visuelles.</p>
         </div>
+
+        <h6>Random List of Web Technologies</h6>
+        <ul>
+            {% for key, value in techno %}
+                <li><a href={{ value[1] }}>{{ value[0] }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
 </section>

@@ -12,6 +12,18 @@ class TwigexController extends ControllerBase {
   public $content = 'Hello from the darkside.';
 
   /**
+   * Hardcodes array to check if
+   * array can be sent to template and use Twig
+   * to display to user.
+   */
+  public $technologies = array(
+    array('Angular', 'http://angular.io'),
+    array('React', 'http://reactjs.com'),
+    array('Google Cloud Platform', 'http://googlecloud.com'),
+    array('Vuejs', 'http://vuejs.com'),
+  );
+
+  /**
    * Generate.
    *
    * @return string
@@ -24,6 +36,7 @@ class TwigexController extends ControllerBase {
     return [
       '#theme' => 'twigex',
       '#content' => $this->t($this->content),
+      '#techno' => $this->technologies,
     ];
   }
 

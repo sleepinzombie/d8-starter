@@ -30,7 +30,7 @@ function twigex_theme() {
   return [
     'twigex' => [
       'render element' => 'children',
-      'variables' => ['content' => NULL,]
+      'variables' => ['content' => NULL,'techno' => NULL],
     ],
   ];
 }
