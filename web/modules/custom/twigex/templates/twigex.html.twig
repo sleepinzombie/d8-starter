@@ -21,20 +21,20 @@
             {% endfor %}
         </ul>
 
-        <h6>Working with Macros in Twig Templates</h6>
-        {% macro input(name, value, type, size) %}
-            <input type="{{ type|default('text') }}" name="{{ name }}" value="{{ value|e }}" size="{{ size|default(20) }}" />
-        {% endmacro %}
+        <h6 class="d-grid d-grid-center">Working with Macros in Twig Templates</h6>
+        <p>Moved the inline macro to an external file for better manageability.</p>
+        <small>Spot the import of the macros file in the codes.</small>
 
+        {% import '@blissy/macros.twig' as _macro %}
         <div class="simple-form">
             <label>Your Name</label>
-            {{ _self.input('name', '', 'text', 20) }}
+            {{ _macro.input('name', '', 'text', 20) }}
 
             <label>Your Address</label>
-            {{ _self.input('address', '', 'text', 20) }}
+            {{ _macro.input('address', '', 'text', 20) }}
 
             <label>Your Contact Number</label>
-            {{ _self.input('contact', '', 'text', 8) }}
+            {{ _macro.input('contact', '', 'text', 8) }}
         </div>
     </div>
 </section>
