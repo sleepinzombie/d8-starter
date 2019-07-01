@@ -1,0 +1,5 @@
+name: 'twigex'
+type: module
+description: 'This module is an example of Twig template and Drupal Console generate commands.'
+core: 8.x
+package: 'Custom'

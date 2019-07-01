@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains twigex.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function twigex_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the twigex module.
+    case 'help.page.twigex':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module is an example of Twig template and Drupal Console generate commands.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function twigex_theme() {
+  return [
+    'twigex' => [
+      'render element' => 'children',
+    ],
+  ];
+}
