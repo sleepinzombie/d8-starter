@@ -18,4 +18,12 @@ console.log('Testing');
       console.log('DOM is ready!');
     });
   
-  })(window.jQuery, window.Drupal);
+})(window.jQuery, window.Drupal);
+
+/**
+ * Function that can be called on the login button
+ */
+function goToLogin() {
+  console.log('Go to logging running.');
+  window.location.href = '/example/web/user';
+}
