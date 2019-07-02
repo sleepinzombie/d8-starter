@@ -1,8 +1,30 @@
+<!-- Trying out attributes in twig templates -->
+{% set _classes =  ['red', 'green', 'blue'] %}
+{% set _attributes_id = 'specific-id' %}
+{% set _attributes_class = 'specific-class' %}
+
 <section id="footer-copyright">
     <div class="wrapper footer-copyright-wrapper">
         <div class="content">
-            <div>Copyright© 2019</div>
-            <small>A project by a zombie.</small>
+            <div class="footer-copyright-content">
+                <img 
+                    src="themes/custom/blissy/images/gorillaz-2d.png"
+                    alt="zombie-image"
+                    height="145px"
+                    width="145px"
+                    >
+                <div class="footer-copyright-text-content">
+                    <div>Copyright© 2019</div>
+                    <small{{ attributes
+                                .setAttribute('class', _attributes_class) 
+                                .addClass(_classes)
+                                .removeClass('green')
+                                .setAttribute('id', _attributes_id)
+                            }}>
+                        A project by a zombie.
+                    </small>
+                </div>
+            </div>
         </div>
     </div>
 </section>

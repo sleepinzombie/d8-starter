@@ -25,6 +25,19 @@ ul {
     padding-top: 50px;
 }
 
+/* Testing purposes */
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
 /* Header */
 header {
     background-color: #3c3c3cde;
@@ -119,6 +132,25 @@ section#footer-copyright .content {
     text-align: center;
     gap: 5px;
     margin: 10px auto;
+}
+
+section#footer-copyright .footer-copyright-content {
+    display: grid;
+    justify-content: center;
+    grid-gap: 25px;
+}
+
+section#footer-copyright .footer-copyright-content > img {
+    display: flex;
+    flex-direction: row;
+    border-radius: 70px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+section#footer-copyright .footer-copyright-content .footer-copyright-text-content {
+    margin: 1rem 0;
 }
 
 section#footer-copyright p {
