@@ -86,8 +86,7 @@ section#twigex .simple-form {
 
 /* Social Media section */
 section#social-media-links {
-    background-color: black;
-    color: white;
+    background-color: #f2f2f2;
     padding: 5px 0;
 }
 
@@ -97,4 +96,32 @@ section#social-media-links ul {
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+/* Copyright Footer */
+section#footer-copyright {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+section#footer-copyright >  .footer-copyright-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+section#footer-copyright .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 5px;
+    margin: 10px auto;
+}
+
+section#footer-copyright p {
+    font-weight: bold;
+    font-size: 15px;
 }
