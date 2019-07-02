@@ -1,0 +1,7 @@
+name: 'modblock'
+type: module
+description: 'My Awesome Module'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - block

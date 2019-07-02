@@ -1,4 +1,9 @@
 /* Global */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 .d-grid {
     display: grid !important;
 }
@@ -31,7 +36,7 @@ header {
 
 header .wrapper > .container {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 7fr 2fr;
 }
 
 header .wrapper > .container > div.menu {
@@ -41,8 +46,6 @@ header .wrapper > .container > div.menu {
 }
 
 header ul {
-    padding: 0;
-    list-style-type: none;
     display: grid;
     grid-gap: 3rem;
     width: 100%;
@@ -79,4 +82,19 @@ section#twigex .simple-form {
     display: grid;
     grid-auto-flow: row;
     grid-gap: 10px;
+}
+
+/* Social Media section */
+section#social-media-links {
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+}
+
+section#social-media-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
