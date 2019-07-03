@@ -1,0 +1,45 @@
+# Group 1 `mobile` breakpoint
+blissy.group1.mobile:
+  label: mobile
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+  group: blissy.group1
+# Group 1 `wide` breakpoint
+blissy.group1.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 851px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: blissy.group1
+
+# Group 2 `mobile` breakpoint
+blissy.group2.mobile:
+  label: mobile
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+  group: blissy.group2
+#Group 2 `narrow` breakpoint
+blissy.group2.narrow:
+  label: narrow
+  mediaQuery: 'all and (min-width: 560px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: blissy.group2
+# Group 2 `wide` breakpoint
+blissy.group2.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 851px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 1.5x
+    - 2x
+  group: blissy.group2
