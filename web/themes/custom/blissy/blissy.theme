@@ -1,5 +1,7 @@
 <?php
 
+use \Drupal\Core\Form\FormStateInterface;
+
 /**
  * @file
  * Functions to support theming in the test theme.
@@ -40,3 +42,58 @@
 //function blissy_preprocess_page(array &$variables) {
 
 //}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function blissy_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {
+
+  // The HTML markup for `details` type
+  $desc_html = 
+<<<HTML
+  <p>
+    <div style="font-weight:bold; margin-bottom:1rem;">Are you happy with your life?</div>
+    <form>
+      <input type="checkbox" name="chkbox-happy" value="Yes"> Yes<br/>
+      <input type="checkbox" name="chkbox-sad" value="No"> No<br/>
+    </form>
+  <p>
+HTML;
+
+  if (isset($form_id)) {
+    return;
+  }
+
+  /**
+   * Using `details` API here
+   * @see https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21Details.php/class/Details/8.2.x
+   */
+  $form['theme_setting_example_3'] = array(
+    '#type' => 'details',
+    '#title' => t('Theme Setting Example 3: Details'),
+    '#description' => t($desc_html),
+    '#open' => TRUE,
+  );
+
+  /**
+   * Using simple `textfield` type here
+   * @see https://api.drupal.org/api/drupal/elements/8.2.x
+   */
+  $form['theme_setting_example'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Example Theme Setting'),
+    '#default_value' => theme_get_setting('theme_setting_example'),
+    '#description' => t('This is a simple test to see if the text field appears or not.'),
+    '#open' => TRUE,
+  );
+
+  /**
+   * Using `checkboxes` type here
+   * @see https://api.drupal.org/api/drupal/elements/8.2.x
+   */
+  $form['theme_setting_example_2'] = array(
+    '#type' => 'checkboxes',
+    '#options' => array('Yes' => t('Yes'), 'No' => t('No')),
+    '#title' => t('Happy with your life?'),
+  );
+}
