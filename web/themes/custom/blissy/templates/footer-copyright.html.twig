@@ -3,6 +3,12 @@
 {% set _attributes_id = 'specific-id' %}
 {% set _attributes_class = 'specific-class' %}
 
+{#  Trying out merge filter of Twig templates.
+    To enable and see the changes in action, enable the code {{ dump(items) }}.
+ #}
+{% set items = { 'apple': 'fruit', 'orange': 'fruit', 'peugeot': 'unknown' } %}
+{% set items = { 'peugeot': 'car', 'renault': 'car' }|merge(items) %}
+
 <section id="footer-copyright">
     <div class="wrapper footer-copyright-wrapper">
         <div class="content">
@@ -12,7 +18,7 @@
                     alt="zombie-image"
                     height="145px"
                     width="145px"
-                    >
+                >
                 <div class="footer-copyright-text-content">
                     <div>Copyright© 2019</div>
                     <small{{ attributes
@@ -24,6 +30,7 @@
                         A project by a zombie.
                     </small>
                 </div>
+                {# <div>{{ dump(items) }}</div> #}
             </div>
         </div>
     </div>
