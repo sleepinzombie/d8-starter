@@ -27,3 +27,8 @@ function goToLogin() {
   console.log('Go to logging running.');
   window.location.href = '/example/web/user';
 }
+
+function isJsWorking() {
+  console.log('Yes, JS is working!');
+  
+}

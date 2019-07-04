@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains secondmodblock.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function secondmodblock_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the secondmodblock module.
+    case 'help.page.secondmodblock':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This is a simple module for testing blocks a second time.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function secondmodblock_theme() {
+  return [
+    'secondmodblock' => [
+      'render element' => 'children',
+    ],
+  ];
+}

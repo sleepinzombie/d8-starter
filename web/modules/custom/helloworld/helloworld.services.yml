@@ -3,8 +3,9 @@ services:
     class: Drupal\helloworld\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
-  helloworld.access_checker:
-    class: Drupal\helloworld\access\CustomAccessCheck
-    arguments: ['@current_user']
-    tags:
-      - { name: access_check, applies to: _helloworld_access_check }
+
+  # helloworld.access_checker:
+  #   class: Drupal\helloworld\Access\CustomAccessCheck
+  #   arguments: ['@current_user']
+  #   tags:
+  #     - { name: access_check, applies to: _helloworld_access_check }

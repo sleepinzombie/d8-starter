@@ -1,0 +1,5 @@
+name: 'secondmodblock'
+type: module
+description: 'This is a simple module for testing blocks a second time.'
+core: 8.x
+package: 'Custom'
