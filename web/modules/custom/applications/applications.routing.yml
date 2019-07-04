@@ -1,0 +1,7 @@
+applications.applications_controller_generate:
+  path: '/applications'
+  defaults:
+    _controller: '\Drupal\applications\Controller\ApplicationsController::generate'
+    _title: 'Applications'
+  requirements:
+    _permission: 'access content'

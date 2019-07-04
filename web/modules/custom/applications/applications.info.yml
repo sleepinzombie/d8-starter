@@ -1,0 +1,5 @@
+name: 'applications'
+type: module
+description: 'This is a module to simply replicate the Applications part on HCMS.'
+core: 8.x
+package: 'Custom'
