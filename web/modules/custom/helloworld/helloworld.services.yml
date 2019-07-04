@@ -1,0 +1,5 @@
+services:
+  helloworld.route_subscriber:
+    class: Drupal\helloworld\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
