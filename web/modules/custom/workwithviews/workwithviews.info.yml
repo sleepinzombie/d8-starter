@@ -1,4 +1,4 @@
-name: 'workwithviews'
+name: 'Work With Views Module'
 type: module
 description: 'This is a simple custom module that will be used to work with custom views and blocks.'
 core: 8.x
