@@ -24,6 +24,8 @@ class LoremipsumController extends ControllerBase {
     $page_title = $config->get('loremipsum.page_title');
     $source_text = $config->get('loremipsum.source_text');
 
+    dump($config);
+
     $repertory = explode(PHP_EOL, $source_text);
     print_r($repertory);
 

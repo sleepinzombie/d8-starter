@@ -1,0 +1,5 @@
+name: 'ingredients'
+type: module
+description: 'A module reserved for ingredients.'
+core: 8.x
+package: 'Custom'

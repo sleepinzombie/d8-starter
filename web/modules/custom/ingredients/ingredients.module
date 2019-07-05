@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains ingredients.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ingredients_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ingredients module.
+    case 'help.page.ingredients':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A module reserved for ingredients.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ingredients_theme() {
+  return [
+    'ingredients' => [
+      'render element' => 'children',
+    ],
+  ];
+}

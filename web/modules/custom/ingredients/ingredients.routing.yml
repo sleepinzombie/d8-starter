@@ -1,0 +1,8 @@
+
+ingredients.ingredients_controller_generate:
+  path: '/ingredients'
+  defaults:
+    _controller: '\Drupal\ingredients\Controller\IngredientsController::generate'
+    _title: 'Ingredients'
+  requirements:
+    _permission: 'access content'

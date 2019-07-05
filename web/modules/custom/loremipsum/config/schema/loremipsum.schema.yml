@@ -14,6 +14,6 @@ block.settings.loremipsum_block:
   type: block_settings
   label: 'Lorem Ipsum Block Label'
   mapping:
-    loremipsum_block:
+    loremipsum_block_settings:
       type: text
       label: Lorem Ipsum Block Settings Label
