@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\helloworld\access;
+namespace Drupal\helloworld\Access;
 
 use Drupal\Core\Routing\Access\AccessInterface;
 use Drupal\Core\Session\AccountInterface;
@@ -13,8 +13,13 @@ class CustomAccessCheck implements AccessInterface {
          * If yes, the route is allowed,
          * If no, the route is forbidden.
          */
-        $permission = $account->hasPermission('vendor') ? AccessResult::allowed() : AccessResult::forbidden();
+        // $permission = $account->hasPermission('vendor') ? AccessResult::allowed() : AccessResult::forbidden();
         
-        return $permission;
+        //return $permission;
+
+
+        // Testing purposes
+        $permission = $account->getDisplayName();
+        dump($permission);
     }
 }
