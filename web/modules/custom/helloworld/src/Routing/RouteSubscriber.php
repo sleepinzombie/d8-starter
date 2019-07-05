@@ -17,17 +17,17 @@ class RouteSubscriber extends RouteSubscriberBase {
    */
   protected function alterRoutes(RouteCollection $collection) {
     /**
-     * In this case, this part of the code is not working.
      * The `get` method takes the route machine name (use Devel)
      * to find out.
      * 
      * The `setPath` method takes a destination route which
      * needs to be set up prior to the migration.
      */
-    if ($route = $collection->get('helloworld.content')) {
-      // $route->setPath('/contribute');
-    } else {
-      // Handle something if the route could not be found.
-    }
+     $route = $collection->get('helloworld.content');
+     if ($route) {
+       $route->setPath('/hello-world');       
+     } else {
+       print_r('The original route has been migrated to a new one.');
+     }
   }
 }
