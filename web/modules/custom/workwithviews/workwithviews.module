@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains workwithviews.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function workwithviews_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the workwithviews module.
+    case 'help.page.workwithviews':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This is a simple custom module that will be used to work with custom views and blocks.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function workwithviews_theme() {
+  return [
+    'workwithviews' => [
+      'render element' => 'children',
+    ],
+  ];
+}

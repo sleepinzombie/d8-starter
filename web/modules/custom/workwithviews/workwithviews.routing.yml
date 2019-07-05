@@ -1,0 +1,8 @@
+
+workwithviews.work_with_views_controller_generate:
+  path: '/workwithviews'
+  defaults:
+    _controller: '\Drupal\workwithviews\Controller\WorkWithViewsController::generate'
+    _title: 'Working with Views'
+  requirements:
+    _permission: 'access content'
