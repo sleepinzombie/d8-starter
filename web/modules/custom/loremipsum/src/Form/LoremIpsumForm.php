@@ -42,7 +42,7 @@ class LoremIpsumForm extends ConfigFormBase {
         // Setting the page title in settings from the value of the form
         $config->set('loremipsum.page_title', $form_state->getValue('page_title'));
         // Setting the source text in settings from the value of the form
-        $config->set('loremipsum.source_text'. $form_state->getValue('source_text'));
+        $config->set('loremipsum.source_text', $form_state->getValue('source_text'));
         $config->save(); // Saving the config
         return parent::submitForm($form, $form_state); // Submitting the form
     }
