@@ -28,6 +28,37 @@ class IngredientsController extends ControllerBase {
   }
 
   /**
+   * Simple function trying out Entity Type Manager.
+   */
+  public function getEntityTypeMgr() {
+    $storage = \Drupal::entityTypeManager()->getStorage('user_role');
+    dump($storage);
+  }
+
+  /**
+   * Simple function trying out Entity Query.
+   */
+  public function getEntityQuery() {
+    $query = \Drupal::entityQuery('user_role');
+    dump($query);
+  }
+
+  /**
+   * This function simply retrieves data from
+   * the `node_field_data` from Drupal database.
+   */
+  public function retrieveNodes() {
+    $connection = \Drupal::database();
+    $query = "SELECT title FROM node_field_data";
+    $result = $connection->query($query);
+    if ($result) {
+      while($row = $result->fetchAssoc()) {
+        dump($row['title']);
+      }
+    }
+  }
+
+  /**
    * Generate.
    *
    * @return string
