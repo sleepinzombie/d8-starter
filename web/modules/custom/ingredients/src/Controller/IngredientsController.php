@@ -47,14 +47,49 @@ class IngredientsController extends ControllerBase {
    * This function simply retrieves data from
    * the `node_field_data` from Drupal database.
    */
-  public function retrieveNodes() {
+  public function simpleStaticQuery() {
     $connection = \Drupal::database();
-    $query = "SELECT title FROM node_field_data";
-    $result = $connection->query($query);
+    $sql = "SELECT * FROM node_field_data";
+    $result = $connection->query($sql);
+    if ($result) {
+      while($row = $result->fetchAssoc()) {
+        # Do something with the data fetched;
+      }
+    } else {
+      print_r("There is no data in the table.");
+    }
+  }
+
+  /**
+   * This function retrieves data from
+   * the `node_field_data` from Drupal database
+   * using a WHERE condition.
+   */
+  public function queryWithWhere() {
+    $connection = \Drupal::database();
+    $sql = "SELECT title FROM node_field_data WHERE type = :type";
+    $result = $connection->query($sql, [':type' => 'page']);
     if ($result) {
       while($row = $result->fetchAssoc()) {
         dump($row['title']);
       }
+    } else {
+      print_r("There is no data in this table.");
+    }
+  }
+
+  public function firstDynamicQuery() {
+    $connection = \Drupal::database();
+    $query = $connection
+          ->select('node_field_data', 'nfd')
+          ->fields('nfd', ['title']); // if array is empty, the query will be: SELECT * ..
+    $result = $query->execute();
+    if($result) {
+      while($row = $result->fetchAssoc()) {
+        dump($row['title']);
+      }
+    } else {
+      print_r("There is no data in this table.");
     }
   }
 
@@ -66,6 +101,7 @@ class IngredientsController extends ControllerBase {
    */
   public function generate() {
     //$simpleservice = \Drupal::service('simpleservice.hello');
+    $this->firstDynamicQuery();
     return [
       '#theme' => 'ingredients',
       //'#messagevar' => $simpleservice->sayHello("Ingredients calling the service."), // This one is for using the global $simpleservice
