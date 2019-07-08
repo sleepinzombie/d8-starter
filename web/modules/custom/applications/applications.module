@@ -30,6 +30,7 @@ function applications_theme() {
   return [
     'applications' => [
       'render element' => 'children',
+      'variables' => ['var' => NULL],
     ],
   ];
 }

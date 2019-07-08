@@ -30,6 +30,10 @@ function ingredients_theme() {
   return [
     'ingredients' => [
       'render element' => 'children',
+      'variables' => [
+       // 'dumpvar' => NULL, s
+        'messagevar' => NULL,
+      ]
     ],
   ];
 }

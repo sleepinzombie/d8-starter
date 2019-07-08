@@ -16,8 +16,11 @@ class IngredientsController extends ControllerBase {
    *   Return Hello string.
    */
   public function generate() {
+    $simpleservice = \Drupal::service('simpleservice.hello');
     return [
       '#theme' => 'ingredients',
+      '#messagevar' => $simpleservice->sayHello("Ingredients calling the service."),
+      // '#dumpvar' => $simpleservice->dumpSomething(),
     ];
   }
 

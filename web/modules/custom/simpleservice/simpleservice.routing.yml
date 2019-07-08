@@ -1,0 +1,8 @@
+
+simpleservice.simpleservice_controller_hello:
+  path: '/simpleservice'
+  defaults:
+    _controller: '\Drupal\simpleservice\Controller\SimpleserviceController::hello'
+    _title: 'Simple Service'
+  requirements:
+    _permission: 'access content'

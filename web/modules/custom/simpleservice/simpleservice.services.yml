@@ -1,0 +1,7 @@
+services:
+  logger.channel.simpleservice:
+    parent: logger.channel_base
+    arguments: ['simpleservice']
+  simpleservice.hello:
+    class: Drupal\simpleservice\SimpleserviceService
+    arguments: []

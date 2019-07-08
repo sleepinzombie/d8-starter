@@ -1,0 +1,5 @@
+name: 'simpleservice'
+type: module
+description: 'A simple module trying out custom service that will be used throughout the application.'
+core: 8.x
+package: 'Custom'
