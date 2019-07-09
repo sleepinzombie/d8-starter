@@ -1,0 +1,5 @@
+name: 'menus'
+type: module
+description: 'This module is all about working with the Menu API.'
+core: 8.x
+package: 'Custom'

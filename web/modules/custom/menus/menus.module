@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains menus.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function menus_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the menus module.
+    case 'help.page.menus':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module is all about working with the Menu API.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function menus_theme() {
+  return [
+    'menus' => [
+      'render element' => 'children',
+    ],
+  ];
+}
