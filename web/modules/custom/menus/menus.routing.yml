@@ -29,3 +29,11 @@ menus.thirdparty:
     _title: 'Third Party Example Settings'
   requirements:
     _permission: 'administer site configuration'
+
+menus.menu_form:
+  path: '/admin/config/menus/form/menu'
+  defaults:
+    _form: '\Drupal\menus\Form\MenuForm'
+    _title: 'MenuForm'
+  requirements:
+    _permission: 'administer site configuration'

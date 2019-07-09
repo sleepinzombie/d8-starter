@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function formexample_form_formexample_contribute_alter(&$form, $form_state, $form_id) {
+    $form['phone_number']['#description'] = t('Start with + and your country code.');
+}

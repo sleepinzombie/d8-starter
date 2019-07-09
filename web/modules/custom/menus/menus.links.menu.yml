@@ -21,3 +21,9 @@ menus.thirdparty:
   base_route: system.admin_custom_settings
   route_name: menus.thirdparty
   weight: 100
+
+menus.menu_form:
+  title: 'Add a new configuration'
+  description: 'This is an example of adding a configuration with the help of a Form.'
+  parent: menus.admin
+  route_name: menus.menu_form
