@@ -8,6 +8,13 @@ use Drupal\Core\Controller\ControllerBase;
  * Class MenusController.
  */
 class MenusController extends ControllerBase {
+  
+
+  public function generate() {
+    return [
+      '#theme' => 'menus'
+    ];
+  }
 
   public function initMenu() {
     return [
