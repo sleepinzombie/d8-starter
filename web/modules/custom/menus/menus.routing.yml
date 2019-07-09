@@ -1,0 +1,31 @@
+# Replaced the default routing that came with the module
+# For Administration Panel
+system.admin_custom_settings:
+  path: '/admin/config/custom'
+  defaults:
+    _controller: '\Drupal\menus\Controller\MenusController::generate'
+    _title: 'Custom Settings'
+  requirements:
+    _permission: 'access content'
+
+# The following is the routing of the menu settings (Basic)
+# Uses the admin/config/custom/basic as path (The one that we created custom)
+# On Init: initMenu
+menus.admin:
+  path: '/admin/config/custom/basic'
+  defaults:
+    _controller: '\Drupal\menus\Controller\MenusController::initMenu'
+    _title: 'Menu Admin Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+# The following is the routing of the menu settings (Third Party)
+# Uses the admin/config/custom/thirdparty as path (The one that we created custom)
+# On Init: initThirdParty
+menus.thirdparty:
+  path: '/admin/config/custom/thirdparty'
+  defaults:
+    _controller: '\Drupal\menus\Controller\MenusController::initThirdParty'
+    _title: 'Third Party Example Settings'
+  requirements:
+    _permission: 'administer site configuration'

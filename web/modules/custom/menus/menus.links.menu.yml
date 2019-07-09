@@ -1,0 +1,23 @@
+# This block refers to the custom panel on the admin console.
+# The name of the panel is `Custom Settings`
+system.admin_custom_settings:
+  title: Custom Settings # The title of the panel
+  parent: system.admin_config # The parent, normally would be the default `system.admin_config`
+  route_name: system.admin_custom_settings # Defined a route for the panel setting
+  weight: 100 # The position of the panel (The higher the weight, the more below the panel will appear)
+
+# This block refers to the first setting in the panel.
+menus.admin: # This is the unique plugin ID
+  title: 'Menu Example Settings' # The title of the setting
+  description: 'This is an example of working with Menus API settings.' # A description for the setting
+  parent: system.admin_custom_settings # This states the block to which the setting will stay in the admin console
+  route_name: menus.admin # The route of the settings (Can be found inside of `menus.routing.yml` file.)
+
+# This block refers to the second setting in the panel
+menus.thirdparty:
+  title: 'Third Party Services Menu Example'
+  description: 'This is an example of working with Menus API settings implementing a 3party setting example.'
+  parent: system.admin_custom_settings
+  base_route: system.admin_custom_settings
+  route_name: menus.thirdparty
+  weight: 100
