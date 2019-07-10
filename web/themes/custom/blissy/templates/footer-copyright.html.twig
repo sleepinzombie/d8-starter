@@ -1,3 +1,6 @@
+<!-- Includes -->
+{% include "@blissy/includes/partial.html.twig" %}
+
 <!-- Trying out attributes in twig templates -->
 {% set _classes =  ['red', 'green', 'blue'] %}
 {% set _attributes_id = 'specific-id' %}
@@ -13,7 +16,7 @@
     <div class="wrapper footer-copyright-wrapper">
         <div class="content">
             <div class="footer-copyright-content">
-                <img 
+                <img
                     src="themes/custom/blissy/images/gorillaz-2d.png"
                     alt="zombie-image"
                     height="145px"
@@ -22,7 +25,7 @@
                 <div class="footer-copyright-text-content">
                     <div>Copyright© 2019</div>
                     <small{{ attributes
-                                .setAttribute('class', _attributes_class) 
+                                .setAttribute('class', _attributes_class)
                                 .addClass(_classes)
                                 .removeClass('green')
                                 .setAttribute('id', _attributes_id)

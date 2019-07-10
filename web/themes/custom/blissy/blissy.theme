@@ -49,7 +49,7 @@ use \Drupal\Core\Form\FormStateInterface;
 function blissy_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {
 
   // The HTML markup for `details` type
-  $desc_html = 
+  $desc_html =
 <<<HTML
   <p>
     <div style="font-weight:bold; margin-bottom:1rem;">Are you happy with your life?</div>

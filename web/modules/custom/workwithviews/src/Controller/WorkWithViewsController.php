@@ -17,7 +17,8 @@ class WorkWithViewsController extends ControllerBase {
    */
   public function generate() {
     return [
-      '#theme' => 'workwithviews',
+      '#type' => 'markup',
+      '#markup' => $this->t('Implement method: generate')
     ];
   }
 

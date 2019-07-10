@@ -17,8 +17,7 @@ class ENumbersController extends ControllerBase {
    */
   public function generate() {
     return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Implement method: generate')
+      '#theme' => 'enumbers',
     ];
   }
 
