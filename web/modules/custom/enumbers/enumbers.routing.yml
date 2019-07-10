@@ -1,0 +1,8 @@
+
+enumbers.e_numbers_controller_generate:
+  path: '/enumbers/generate'
+  defaults:
+    _controller: '\Drupal\enumbers\Controller\ENumbersController::generate'
+    _title: 'ENumbers'
+  requirements:
+    _permission: 'access content'

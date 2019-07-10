@@ -1,0 +1,5 @@
+name: 'enumbers'
+type: module
+description: 'This module comprises of custom ENumbers.'
+core: 8.x
+package: 'Custom'

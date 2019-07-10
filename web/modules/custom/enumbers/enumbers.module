@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains enumbers.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function enumbers_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the enumbers module.
+    case 'help.page.enumbers':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module comprises of custom ENumbers.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function enumbers_theme() {
+  return [
+    'enumbers' => [
+      'render element' => 'children',
+    ],
+  ];
+}
