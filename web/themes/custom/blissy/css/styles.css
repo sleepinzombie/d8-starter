@@ -33,6 +33,10 @@ ul {
     margin-top: 50px !important;
 }
 
+.d-none {
+    display: none !important;
+}
+
 /* Testing purposes */
 .red {
     color: red;
@@ -190,4 +194,11 @@ section#footer-copyright p {
     margin-right: 10px;
     margin-left: 10px;
     text-align: center;
+}
+
+.node--custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

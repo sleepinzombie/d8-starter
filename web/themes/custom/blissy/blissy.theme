@@ -44,6 +44,28 @@ use \Drupal\Core\Form\FormStateInterface;
 //}
 
 /**
+ * Implements hook_preprocess_HOOK().
+ */
+function blissy_preprocess_region(&$variables) {
+  $region = $variables['elements']['#region'];
+  $regions = ['header', 'content', 'footer'];
+  if (in_array($region, $regions)) {
+    $variables['attributes']['class'][] = 'region--preface';
+    $variables['attributes']['class'][] = 'region--prefix';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ * 
+ * Global Addition of attributes `node--custom` to nodes.
+ */
+function blissy_preprocess_node(&$variables) {
+  $variables['attributes']['class'] = array();
+  $variables['attributes']['class'][] = 'node--custom';
+}
+
+/**
  * Implements hook_form_system_theme_settings_alter().
  */
 function blissy_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {

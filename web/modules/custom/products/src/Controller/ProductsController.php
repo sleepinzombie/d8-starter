@@ -16,6 +16,7 @@ class ProductsController extends ControllerBase {
    *   Return Hello string.
    */
   public function generate() {
+    kint("The products from VS Code is running");
     return [
       '#type' => 'markup',
       '#markup' => $this->t('Implement method: generate')
