@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Session\AccountInterface;
 
 /**
  * Implements hook_help().
@@ -32,4 +34,12 @@ function menus_theme() {
       'render element' => 'children',
     ],
   ];
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function menus_user_login(AccountInterface $account) {
+  drupal_set_message("Hello %name. Welcome!", ['%name' => $account->getDisplayName()]);
+  return new RedirectResponse(\Drupal::url('<front>', [], ['absolute' => TRUE]));
 }
