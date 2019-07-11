@@ -1,0 +1,5 @@
+name: 'products'
+type: module
+description: 'This a custom module for Products.'
+core: 8.x
+package: 'Custom'
