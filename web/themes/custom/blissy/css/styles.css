@@ -29,6 +29,10 @@ ul {
     padding-top: 50px;
 }
 
+.mt-50 {
+    margin-top: 50px !important;
+}
+
 /* Testing purposes */
 .red {
     color: red;
@@ -159,4 +163,31 @@ section#footer-copyright .footer-copyright-content .footer-copyright-text-conten
 section#footer-copyright p {
     font-weight: bold;
     font-size: 15px;
+}
+
+/* Views-vendors */
+.views-vendors {
+    -webkit-box-shadow: 6px 5px 10px 5px rgba(199,199,199,1);
+    -moz-box-shadow: 6px 5px 10px 5px rgba(199,199,199,1);
+    box-shadow: 6px 5px 10px 5px rgba(199,199,199,1);
+    margin-right: 50px;
+}
+
+.views-vendors > .views-field-title {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.views-vendors > .views-field-title a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.views-vendors > .views-field-body p {
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
 }
