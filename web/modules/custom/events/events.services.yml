@@ -1,7 +1,8 @@
 services:
-  logger.channel.events:
-    parent: logger.channel_base
-    arguments: ['events']
-  config:
-    class: Drupal\events\DefaultService
-    arguments: []
+  # Name of this service.
+  events_service:
+    # Event subscriber class that will listen for the events.
+    class: '\Drupal\events\EventSubscriber\ConfigEventSubscriber'
+    # Tagged as an event_subscriber to register this subscriber with the event_dispatch service.
+    tags:
+      - { name: 'event_subscriber' }
