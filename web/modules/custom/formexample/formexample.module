@@ -23,3 +23,27 @@ function formexample_form_alter(&$form, $form_state, $form_id) {
         $form['#method'] = "GET";
     }
 }
+
+/**
+ * Preprocess form element.
+ *
+ * Addition of a custom `form--contribute-wrapper` class.
+ *
+ * @param array $variables
+ * @return void
+ */
+function formexample_preprocess_form(array &$variables) {
+    $variables['attributes']['class'][] = 'form--contribute-wrapper';
+}
+
+/**
+ * Preprocess form_element element.
+ * 
+ * Addition of a custom `form--element-wrapper` class.
+ *
+ * @param array $variables
+ * @return void
+ */
+function formexample_preprocess_form_element(array &$variables) {
+    $variables['attributes']['class'][] = 'form--element-wrapper';
+}
