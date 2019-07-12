@@ -12,3 +12,9 @@ services:
     class: '\Drupal\events\EventSubscriber\UserLoginSubscriber'
     tags:
       - { name: 'event_subscriber' }
+
+  # Another config subscriber trying out subscriber priorites.
+  priority_subscriber_service:
+    class: '\Drupal\events\EventSubscriber\UserLoginSubscriber'
+    tags:
+      - { name: 'event_subscriber' }

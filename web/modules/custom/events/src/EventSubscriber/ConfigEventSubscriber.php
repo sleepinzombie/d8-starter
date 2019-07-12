@@ -3,8 +3,6 @@
 namespace Drupal\events\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\EventDispatcher\Event;
-
 use Drupal\Core\Config\ConfigEvents;
 use Drupal\Core\Config\ConfigCrudEvent;
 
