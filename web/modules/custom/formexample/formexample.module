@@ -6,3 +6,20 @@
 function formexample_form_formexample_contribute_alter(&$form, $form_state, $form_id) {
     $form['phone_number']['#description'] = t('Start with + and your country code.');
 }
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Altering some of the form elements from
+ * its original state.
+ *
+ * This function functionalities are just trials.
+ * It is being used to learn how the form hooks alter works.
+ */
+function formexample_form_alter(&$form, $form_state, $form_id) {
+    if ($form_id == 'formexample_contribute') {
+        $form['title']['#title'] = t('Title Altered');
+        $form['description']['#title'] = t('Description Altered');
+        $form['#method'] = "GET";
+    }
+}
