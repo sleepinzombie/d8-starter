@@ -1,0 +1,8 @@
+name: 'Contact'
+type: module
+description: 'This is a custom module for contact to test myself.'
+core: 8.x
+package: 'Custom'
+configure: contact.admin_settings
+dependencies:
+  - block

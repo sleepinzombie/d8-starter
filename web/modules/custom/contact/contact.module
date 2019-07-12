@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Contains contact.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function contact_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the contact module.
+    case 'help.page.contact':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This is a custom module for contact to test myself.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function contact_theme() {
+  return [
+    'contact' => [
+      'render element' => 'children',
+      'theme' => 'blissy',
+    ],
+  ];
+}
+
+/**
+ * Preprocess breadcrumb
+ *
+ * Changing one of the element on the
+ * breadcrumb's displayed text.
+ *
+ * @param array $variables
+ * @return void
+ */
+function contact_preprocess_breadcrumb(array &$variables) {
+  $variables['breadcrumb'][3]['text'] = 'Add Content';
+}

@@ -1,0 +1,11 @@
+system.admin_contact_custom_settings:
+  title: Contact Content
+  parent: system.admin_content
+  route_name: system.admin_contact_custom_settings
+  weight: 100
+
+contact.add:
+  title: 'Add Content'
+  description: 'Add new content to the contact content.'
+  parent: system.admin_contact_custom_settings
+  route_name: contact.add

@@ -1,0 +1,25 @@
+
+contact.contact_controller_generate:
+  path: '/contact'
+  defaults:
+    _controller: '\Drupal\contact\Controller\ContactController::generate'
+    _title: 'Contact'
+  requirements:
+    _permission: 'access content'
+
+system.admin_contact_custom_settings:
+  path: '/admin/content/contact'
+  defaults:
+    _controller: '\Drupal\contact\Controller\ContactController::generate'
+    _title: 'Contact Content'
+  requirements:
+    _permission: 'access content'
+
+contact.add:
+  path: '/admin/content/contact/add'
+  defaults:
+    # _controller: '\Drupal\contact\Controller\ContactController::loadForm'
+    _form: '\Drupal\contact\Form\InformationForm'
+    _title: 'Add Contact Content'
+  requirements:
+    _permission: 'access content'

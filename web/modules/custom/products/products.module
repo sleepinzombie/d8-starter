@@ -42,7 +42,7 @@ function products_help($route_name, RouteMatchInterface $route_match) {
 function products_theme_suggestions_views_view_alter(&$suggestions, $variables) {
   $suggestions[] = 'test__template';
   if (in_array('test__template', $suggestions)) {
-    print_r('The template is found.');
+    // print_r('The template is found.'); ## Print something if template is found
   } else {
     print_r('Call backup, someone is missing.');
   }
@@ -60,7 +60,7 @@ function products_theme($existing, $type, $theme, $path) {
 }
 
 function products_node_view($node, $view_mode, $langcode) {
-  
+
 }
 
 function products_preprocess_node(&$variables){

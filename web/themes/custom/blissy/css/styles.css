@@ -13,6 +13,10 @@ ul {
     align-items: center !important;
 }
 
+.d-none {
+    display: none !important;
+}
+
 .text-align-center {
     text-align: center;
 }
@@ -33,8 +37,8 @@ ul {
     margin-top: 50px !important;
 }
 
-.d-none {
-    display: none !important;
+.ml-0 {
+    margin-left: 0 !important;
 }
 
 /* Testing purposes */
