@@ -6,3 +6,9 @@ services:
     # Tagged as an event_subscriber to register this subscriber with the event_dispatch service.
     tags:
       - { name: 'event_subscriber' }
+
+  # Subscriber to the event we dispatch in hook_user_login.
+  custom_user_login_event:
+    class: '\Drupal\events\EventSubscriber\UserLoginSubscriber'
+    tags:
+      - { name: 'event_subscriber' }

@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\events\Event\UserLoginEvent;
+use Symfony\Component\EventDispatcher\EventDispatcher;
 
 /**
  * Implements hook_help().
@@ -21,4 +23,20 @@ function events_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function events_user_login($account) {
+  // Create a new instance of our event.
+  $event = new UserLoginEvent($account);
+
+  // Get the event_dispatcher server and dispatch the event.
+
+  /**
+   * @var EventDispatcher $dispatcher
+   */
+  $dispatcher = \Drupal::service('event_dispatcher');
+  $dispatcher->dispatch(UserLoginEvent::EVENT_NAME, $event);
 }
