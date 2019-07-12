@@ -1,0 +1,7 @@
+services:
+  logger.channel.events:
+    parent: logger.channel_base
+    arguments: ['events']
+  config:
+    class: Drupal\events\DefaultService
+    arguments: []

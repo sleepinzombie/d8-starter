@@ -1,0 +1,5 @@
+name: 'events'
+type: module
+description: 'This is a custom module for trying out events and events subscribers.'
+core: 8.x
+package: 'Custom'
