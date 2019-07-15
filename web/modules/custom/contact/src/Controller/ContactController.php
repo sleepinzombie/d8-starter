@@ -19,6 +19,7 @@ class ContactController extends ControllerBase {
     return [
       '#field_title' => NULL,
       '#field_content' => NULL,
+      '#image' => NULL,
     ];
   }
 
