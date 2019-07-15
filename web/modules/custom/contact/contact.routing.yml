@@ -1,4 +1,4 @@
-
+# Public route
 contact.contact_controller_generate:
   path: '/contact'
   defaults:
@@ -7,6 +7,7 @@ contact.contact_controller_generate:
   requirements:
     _permission: 'access content'
 
+# First level menu routing in backoffice (Level 1)
 system.admin_contact_custom_settings:
   path: '/admin/content/contact'
   defaults:
@@ -15,10 +16,10 @@ system.admin_contact_custom_settings:
   requirements:
     _permission: 'access content'
 
+# Second level menu routing from Level 1 (Level 2)
 contact.add:
   path: '/admin/content/contact/add'
   defaults:
-    # _controller: '\Drupal\contact\Controller\ContactController::loadForm'
     _form: '\Drupal\contact\Form\InformationForm'
     _title: 'Add Contact Content'
   requirements:
