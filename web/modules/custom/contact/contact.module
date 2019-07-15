@@ -29,8 +29,10 @@ function contact_help($route_name, RouteMatchInterface $route_match) {
 function contact_theme() {
   return [
     'contact' => [
-      'render element' => 'children',
-      'theme' => 'blissy',
+      'variables' => [
+          'field_title' => NULL,
+          'field_content' => NULL,
+      ],
     ],
   ];
 }

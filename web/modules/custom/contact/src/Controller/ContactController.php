@@ -12,19 +12,13 @@ class ContactController extends ControllerBase {
   /**
    * Generate.
    *
-   * @return string
-   *   Return Hello string.
+   * Generate the page.
+   *
    */
   public function generate() {
     return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Implement method: generate')
-    ];
-  }
-
-  public function loadForm() {
-    return [
-      '#theme' => 'contact'
+      '#field_title' => NULL,
+      '#field_content' => NULL,
     ];
   }
 

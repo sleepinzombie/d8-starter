@@ -16,12 +16,28 @@ class InformationBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
+   * On init, it fetches the values from the
+   * state and displays to the template.
+   *
    */
   public function build() {
-    $build = [];
-    $build['information_block']['#markup'] = 'Implement InformationBlock.';
+    return [
+      '#theme' => 'contact',
+      '#field_title' => $this->retrieveStateValues()['title'],
+      '#field_content' => $this->retrieveStateValues()['content'],
+    ];
+  }
 
-    return $build;
+  /**
+   * A custom method to simply fetch the
+   * values from the state (using key/value pairs).
+   *
+   * @return array Array of the retrieved values.
+   */
+  public function retrieveStateValues() {
+    $keys = ['title', 'content'];
+    $retrieved_values = \Drupal::state()->getMultiple($keys);
+    return $retrieved_values;
   }
 
 }
