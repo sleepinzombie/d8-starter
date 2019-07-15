@@ -31,12 +31,23 @@ class InformationForm extends FormBase {
       '#size' => 64,
       '#weight' => '0',
       '#default_value' => $state_values['title'],
+      '#required'=> TRUE,
     ];
     $form['content'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Content'),
       '#weight' => '0',
       '#default_value' => $state_values['content'],
+    ];
+    $form['image'] = [
+      '#type' => 'managed_file',
+      '#title' => $this->t('Image Reference'),
+      '#upload_validators' => [
+        'file_validate_extensions' => array('gif png jpg jpeg'),
+        'file_validate_size' => array(25600000),
+      '#preview_image_style' => 'medium',
+      '#upload_location' => 'public://profile-pictures',
+      ]
     ];
     $form['submit'] = [
       '#type' => 'submit',
