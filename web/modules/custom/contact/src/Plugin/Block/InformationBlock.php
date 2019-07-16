@@ -26,7 +26,7 @@ class InformationBlock extends BlockBase {
       '#theme' => 'contact',
       '#field_title' => $this->retrieveStateValues()['title'],
       '#field_content' => $this->retrieveStateValues()['content'],
-      '#image' => $this->loadImage($this->retrieveStateValues()['image'][0]),
+      '#image' => $this->loadImage(intval($this->retrieveStateValues()['image'][0])),
     ];
   }
 

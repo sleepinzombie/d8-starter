@@ -46,9 +46,9 @@ class InformationForm extends FormBase {
       '#upload_validators' => [
         'file_validate_extensions' => array('gif png jpg jpeg'),
         'file_validate_size' => array(25600000),
+      ],
       '#preview_image_style' => 'medium',
-      '#upload_location' => 'public://profile-pictures', // Might need to change this url
-      ]
+      '#upload_location' => 'public://contact_content/',
     ];
     $form['submit'] = [
       '#type' => 'submit',
@@ -70,7 +70,13 @@ class InformationForm extends FormBase {
 
   /**
    * {@inheritdoc}
-   * @todo NEED TO WORK ON THIS TOMORROW FIX THE ERRORS`
+   * Submitting the form.
+   *
+   * Grabbing values for title, content and image.
+   *
+   * For image, I used the file.usage service to save.
+   *
+   * Drupal set message from BS is used to show messages/errors.
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $title = $form_state->getValue('title');
@@ -82,19 +88,19 @@ class InformationForm extends FormBase {
       $image_file->setPermanent();
       $image_file->save();
       $file_usage = \Drupal::service('file.usage');
-      $file_usage->add($image_file, 'contact', 'block', $image_fid);
+      $file_usage->add($image_file, 'contact', 'contact', intval($image_fid[0]));
     } else {
-      ksm("It is empty here oh oh");
+      drupal_set_message(t('An error occured while uploading the image. Try again later.'), 'error');
     }
 
-    // $state_form_variables = [
-    //   'title' => $title,
-    //   'content' => $content,
-    //   'image' => $image_fid,
-    // ];
+    $state_form_variables = [
+      'title' => $title,
+      'content' => $content,
+      'image' => $image_fid,
+    ];
 
-    // \Drupal::state()->setMultiple($state_form_variables);
-    // \Drupal::messenger()->addMessage('Your content has been saved to the Drupal state.');
+    \Drupal::state()->setMultiple($state_form_variables);
+    \Drupal::messenger()->addMessage('Your content has been saved to the Drupal state.');
   }
 
 }
