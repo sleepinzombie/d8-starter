@@ -43,15 +43,19 @@ class InformationBlock extends BlockBase {
   }
 
   /**
-   * Function to obtain a stored image uri
-   * in the Drupal databse using its fid.
+   * Function to obtain a stored image uri and
+   * the filename of the image from the Drupal database using its fid.
    *
    * @param integer $image_fid The fid of the image you want to use.
-   * @return string The processed uri of the image.
+   * @return array The uri path and the filename of the image.
    */
   public function loadImage($image_fid) {
     $file = File::load($image_fid);
     $path = $file->getFileUri();
-    return $path;
+    $filename = $file->getFilename();
+    return [
+      'path' => $path,
+      'filename' => $filename,
+    ];
   }
 }
