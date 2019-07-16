@@ -30,6 +30,7 @@ function banner_theme() {
     'banner' => [
       'variables' => [
         'banner_title' => NULL,
+        'banner_description' => NULL,
       ]
     ],
   ];

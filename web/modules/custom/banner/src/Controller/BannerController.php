@@ -16,6 +16,7 @@ class BannerController extends ControllerBase {
   public function generate() {
     return [
       '#banner_title' => NULL,
+      '#banner_description' => NULL,
     ];
   }
 

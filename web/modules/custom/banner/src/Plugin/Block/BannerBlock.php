@@ -21,6 +21,7 @@ class BannerBlock extends BlockBase {
     return [
       '#theme' => 'banner',
       '#banner_title' => NULL,
+      '#banner_description' => 'This is a description',
     ];
   }
 

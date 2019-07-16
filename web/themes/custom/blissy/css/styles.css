@@ -198,12 +198,19 @@ section#footer-copyright p {
 
 .banner {
     display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
 .banner .title {
     width: 100%;
     text-align: center;
+}
+
+.banner .banner-description {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 /* Views-vendors */
