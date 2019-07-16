@@ -35,11 +35,3 @@ function menus_theme() {
     ],
   ];
 }
-
-/**
- * Implements hook_user_login().
- */
-function menus_user_login(AccountInterface $account) {
-  drupal_set_message("Hello %name. Welcome!", ['%name' => $account->getDisplayName()]);
-  return new RedirectResponse(\Drupal::url('<front>', [], ['absolute' => TRUE]));
-}

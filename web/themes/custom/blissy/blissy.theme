@@ -3,6 +3,10 @@
 use \Drupal\Core\Form\FormStateInterface;
 
 /**
+ * @global array Global variable for banner title
+ */
+$GLOBALS['banner_title'] = [];
+/**
  * @file
  * Functions to support theming in the test theme.
  */
@@ -38,10 +42,33 @@ use \Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_preprocess_page() for page.html.twig.
+ * 
+ * Preprocess page setting the banner title captured from the page
+ * to the global variable by using a conditional statement.
+ * 
+ * @param array $variables
+ * @return void
  */
-//function blissy_preprocess_page(array &$variables) {
+function blissy_preprocess_page(array &$variables) {
+  if ($variables['page']['#type'] == 'page' &&  array_key_exists('bannerblock', $variables['page']['content'])) {
+    $GLOBALS['banner_title'] = $variables['page']['#title'];
+  } else {
+    drupal_set_message('There is no banner block on this current page.');
+  }
+}
 
-//}
+/**
+ * Preprocess banner
+ *
+ * Setting the banner title to the global variable
+ * capture from preprocess page.
+ *
+ * @param array $variables
+ * @return void
+ */
+function blissy_preprocess_banner(&$variables) {
+  $variables['banner_title'] = $GLOBALS['banner_title'];
+}
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -57,7 +84,7 @@ function blissy_preprocess_region(&$variables) {
 
 /**
  * Implements hook_preprocess_HOOK().
- * 
+ *
  * Global Addition of attributes `node--custom` to nodes.
  */
 function blissy_preprocess_node(&$variables) {

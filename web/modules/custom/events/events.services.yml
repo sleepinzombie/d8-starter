@@ -8,13 +8,13 @@ services:
       - { name: 'event_subscriber' }
 
   # Subscriber to the event we dispatch in hook_user_login.
-  custom_user_login_event:
-    class: '\Drupal\events\EventSubscriber\UserLoginSubscriber'
-    tags:
-      - { name: 'event_subscriber' }
+  # custom_user_login_event:
+  #   class: '\Drupal\events\EventSubscriber\UserLoginSubscriber'
+  #   tags:
+  #     - { name: 'event_subscriber' }
 
-  # Another config subscriber trying out subscriber priorites.
-  priority_subscriber_service:
-    class: '\Drupal\events\EventSubscriber\UserLoginSubscriber'
-    tags:
-      - { name: 'event_subscriber' }
+  # # Another config subscriber trying out subscriber priorites.
+  # priority_subscriber_service:
+  #   class: '\Drupal\events\EventSubscriber\UserLoginSubscriber'
+  #   tags:
+  #     - { name: 'event_subscriber' }

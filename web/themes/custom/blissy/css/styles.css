@@ -190,6 +190,22 @@ section#footer-copyright p {
     font-size: 15px;
 }
 
+/* Banner */
+#block-bannerblock {
+    background: rgba(0, 0, 0, 0.43);
+    opacity: 0.9;
+}
+
+.banner {
+    display: flex;
+    height: 100%;
+}
+
+.banner .title {
+    width: 100%;
+    text-align: center;
+}
+
 /* Views-vendors */
 .views-vendors {
     -webkit-box-shadow: 6px 5px 10px 5px rgba(199,199,199,1);

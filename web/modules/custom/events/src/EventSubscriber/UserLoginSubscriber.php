@@ -39,16 +39,16 @@ class UserLoginSubscriber implements EventSubscriberInterface {
      * @param UserLoginEvent $event
      * @return void
      */
-    public function onUserLogin(UserLoginEvent $event) {
-        $database = \Drupal::database();
-        $dateFormatter = \Drupal::service('date.formatter');
+    // public function onUserLogin(UserLoginEvent $event) {
+    //     $database = \Drupal::database();
+    //     $dateFormatter = \Drupal::service('date.formatter');
 
-        $account_created = $database->select('users_field_data', 'ud')
-            ->fields('ud', ['created'])
-            ->condition('ud.uid', $event->account->id())
-            ->execute()
-            ->fetchField();
+    //     $account_created = $database->select('users_field_data', 'ud')
+    //         ->fields('ud', ['created'])
+    //         ->condition('ud.uid', $event->account->id())
+    //         ->execute()
+    //         ->fetchField();
 
-        drupal_set_message('Your account was successfully created on: %created_data', ['%created_date' => $dateFormatter->format($account_created, 'short')]);
-    }
+    //     drupal_set_message('Your account was successfully created on: %created_data', ['%created_date' => $dateFormatter->format($account_created, 'short')]);
+    // }
 }

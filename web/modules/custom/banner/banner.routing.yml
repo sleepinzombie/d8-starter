@@ -1,0 +1,8 @@
+
+banner.banner_controller_generate:
+  path: '/banner'
+  defaults:
+    _controller: '\Drupal\banner\Controller\BannerController::generate'
+    _title: 'Banner'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains banner.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function banner_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.banner':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This custom module is for common banners throughout the site.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function banner_theme() {
+  return [
+    'banner' => [
+      'variables' => [
+        'banner_title' => NULL,
+      ]
+    ],
+  ];
+}
