@@ -1,0 +1,4 @@
+administer drushtest configuration:
+  title: 'Administer drushtest configuration'
+  description: 'Optional description.'
+  restrict access: true
