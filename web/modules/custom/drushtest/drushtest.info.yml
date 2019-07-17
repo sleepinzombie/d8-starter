@@ -1,5 +1,0 @@
-name: Drush Test Module
-type: module
-description: A simple description for drush.
-package: Custom
-core: 8.x

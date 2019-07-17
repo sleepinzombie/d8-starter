@@ -1,13 +1,13 @@
 # Custom module library for general purposes.
-drushtest:
+dtest:
   js:
-    js/drushtest.js: {}
+    js/dtest.js: {}
   css:
     component:
-      css/drushtest.css: {}
+      css/dtest.css: {}
   dependencies:
     - core/drupalSettings
-    - drushtest/jquery-labelauty
+    - dtest/jquery-labelauty
 
 # Third-party library (self hosted).
 jquery-labelauty:

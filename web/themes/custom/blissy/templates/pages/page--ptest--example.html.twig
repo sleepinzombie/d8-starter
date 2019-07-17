@@ -1,0 +1,19 @@
+<header>
+    {{ page.header }}
+</header>
+
+<main style="padding-top:40px;">
+    <div class="wrapper">
+        <h2>Description</h2>
+        <p>This is a brief paragraph as you can see just for testing purpose.</p>
+        <p>We are basically testing if overriden template can have variables. Yes they can but via
+        the hooks.<p>
+
+        <p>Below is a simple variable: </p>
+        <span>{{ page['somevar'][0] }}</span>
+    </div>
+</main>
+
+<footer>
+    {{ page.footer }}
+</footer>

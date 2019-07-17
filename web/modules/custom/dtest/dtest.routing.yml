@@ -1,0 +1,7 @@
+dtest.example:
+  path: '/dtest/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\dtest\Controller\DtestController::build'
+  requirements:
+    _permission: 'access content'
