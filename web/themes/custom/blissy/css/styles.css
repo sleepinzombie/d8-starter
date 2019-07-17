@@ -213,6 +213,21 @@ section#footer-copyright p {
     margin-bottom: 1rem;
 }
 
+/* Fetched Content Tables (Vendors) */
+.table-vendors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.table-vendors > span {
+    padding: 8px 4px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
 /* Views-vendors */
 .views-vendors {
     -webkit-box-shadow: 6px 5px 10px 5px rgba(199,199,199,1);

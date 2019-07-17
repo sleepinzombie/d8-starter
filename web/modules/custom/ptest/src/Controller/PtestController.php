@@ -13,13 +13,11 @@ class PtestController extends ControllerBase {
    * Builds the response.
    */
   public function build() {
-
     $build['content'] = [
       '#theme' => 'page__ptest__example',
       '#somevar' => 'Something var',
     ];
-
     return $build;
   }
-
+  
 }

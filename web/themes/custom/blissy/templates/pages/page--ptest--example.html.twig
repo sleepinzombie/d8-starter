@@ -11,6 +11,18 @@
 
         <p>Below is a simple variable: </p>
         <span>{{ page['somevar'][0] }}</span>
+
+        <div class="fetched__content">
+            <h2 style="text-align:center;">List of Vendors</h2>
+            <div class="table-vendors">
+                <span><strong>NID</strong></span>
+                <span><strong>Title</strong></span>
+                {% for vendor in page['fetched_vendors'][0] %}
+                    <span>{{ vendor['nid'] }}</span>
+                    <span>{{ vendor['title'] }}</span>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </main>
 

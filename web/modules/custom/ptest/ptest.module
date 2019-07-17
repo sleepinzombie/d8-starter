@@ -8,6 +8,7 @@
  * This file is no longer required in Drupal 8.
  * @see https://www.drupal.org/node/2217931
  */
+
 /**
  * Implements hook_theme().
  */
@@ -22,6 +23,37 @@ function ptest_theme($existing, $type, $theme, $path) {
     ];
 }
 
-function ptest_preprocess_page__ptest__example(&$variables) {
-    $variables['page']['somevar'] = ['Hola'];
+/**
+ * Fetching vendors content type
+ * from Drupal database.
+ *
+ * @param string $type The type of content
+ * @return array Fetched content
+ */
+function fetchContent(string $type) {
+    $fetched_content = [];
+
+    $connection = \Drupal::database();
+    $sql = "SELECT * FROM node_field_data WHERE type = :type";
+    $result = $connection->query($sql, [':type' => $type]);
+
+    if ($result) {
+      while($row = $result->fetchAssoc()) {
+        array_push($fetched_content, $row);
+      }
+    }
+
+    return $fetched_content;
+}
+
+/**
+ * Getting variables ready for Twig templates
+ *
+ * @param array $variables
+ * @return void
+ */
+function ptest_preprocess_page__ptest__example(array &$variables) {
+    $variables['page']['somevar'] = ['Hola']; // Dummy variable simply for testing purpose.
+    $variables['page']['fetched_vendors'] = [fetchContent('vendor')]; // Fetching the vendor type contents.
+
 }
