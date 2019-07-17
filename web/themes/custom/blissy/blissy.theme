@@ -50,22 +50,9 @@ $GLOBALS['banner_title'] = [];
  * @return void
  */
 function blissy_preprocess_page(array &$variables) {
-
-  // Using Entity API to try to
-  // fetch fields of the content type => Not working right now
-  $node = \Drupal::entityTypeManager()
-    ->getStorage('node')
-    ->load('15');
-
-  ksm($node->getEntityType()->getCollectionLabel());
-
   if ($variables['page']['#type'] == 'page' &&  array_key_exists('bannerblock', $variables['page']['content'])) {
     $GLOBALS['banner_title'] = $variables['page']['#title'];
-  } else {
-    drupal_set_message('There is no banner block on this current page.');
   }
-
-  // ksm($variables);
 }
 
 /**
