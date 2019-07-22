@@ -261,3 +261,11 @@ section#footer-copyright p {
     justify-content: center;
     align-items: center;
 }
+
+/* Block Example: The block on the homepage */
+#block-example {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }

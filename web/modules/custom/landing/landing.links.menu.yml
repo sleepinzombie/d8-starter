@@ -1,0 +1,13 @@
+# First level menu in backoffice (Level 1)
+system.admin_custom_configurations:
+  title: Custom Administration
+  parent: system.admin_content
+  route_name: system.admin_custom_configurations
+  weight: 100
+
+# Second level menu from Level 1 (Level 2)
+landing.add:
+  title: 'Add Landing Content'
+  description: 'Add new content to the landing content.'
+  parent: system.admin_custom_configurations
+  route_name: landing.add

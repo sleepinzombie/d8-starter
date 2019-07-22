@@ -14,3 +14,13 @@ landing.add:
     _form: '\Drupal\landing\Form\LandingForm'
   requirements:
     _permission: 'access content'
+
+
+## Admin Custom Settings
+system.admin_custom_configurations:
+  path: '/admin/custom/content/'
+  defaults:
+    _controller: '\Drupal\landing\Controller\LandingController::build'
+    _title: 'Custom Administration'
+  requirements:
+    _permission: 'access content'

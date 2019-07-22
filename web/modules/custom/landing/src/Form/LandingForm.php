@@ -17,11 +17,15 @@ class LandingForm extends FormBase {
     /**
      * Building the form to add landing page content.
      *
+     * The form will automatically be filled in
+     * if there are existing values in the Drupal state.
+     *
      * @param array $form
      * @param \Drupal\Core\Form\FormStateInterface $form_state
      * @return void
      */
     public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state) {
+        $existing_values = \Drupal::state()->get('landing_contents');
         $form['landing'] = [
             '#type'         =>  'fieldset',
             '#title'        =>  t('Landing Block contents'),
@@ -35,12 +39,18 @@ class LandingForm extends FormBase {
             '#title'        =>  'Title',
             '#required'     =>  TRUE,
             '#maxlength'    =>  128,
+            '#default_value'=>  isset($existing_values['title'])
+                                ? $existing_values['title']
+                                : NULL,
         ];
 
         $form['landing']['content'] = [
             '#type'         =>  'text_format',
             '#title'        =>  'Content',
             '#required'     =>  TRUE,
+            '#default_value'=>  isset($existing_values['content']['value'])
+                                ? $existing_values['content']['value']
+                                : NULL,
         ];
 
         $form['landing']['actions'] = [
