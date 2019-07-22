@@ -19,5 +19,8 @@ function landing_theme() {
             'content' => NULL,
         ],
       ],
+      'landing_bottom' => [
+        'variables' => [],
+      ],
     ];
   }
