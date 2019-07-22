@@ -1,7 +1,16 @@
 landing.example:
-  path: '/landing/example'
+  path: '/'
   defaults:
     _title: 'Example'
     _controller: '\Drupal\landing\Controller\LandingController::build'
+  requirements:
+    _permission: 'access content'
+
+## Add landing information
+landing.add:
+  path: 'admin/landing/add'
+  defaults:
+    _title: 'Add Landing Information'
+    _form: '\Drupal\landing\Form\LandingForm'
   requirements:
     _permission: 'access content'

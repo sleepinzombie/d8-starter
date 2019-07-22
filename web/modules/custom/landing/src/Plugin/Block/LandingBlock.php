@@ -13,16 +13,16 @@ use Drupal\Core\Block\BlockBase;
  *   category = @Translation("landing")
  * )
  */
-class ExampleBlock extends BlockBase {
+class LandingBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
    */
   public function build() {
-    $build['content'] = [
-      '#markup' => $this->t('It works!'),
+    return [
+      '#theme' => 'landing',
+      '#content' => \Drupal::state()->get('landing_contents'),
     ];
-    return $build;
   }
 
 }
