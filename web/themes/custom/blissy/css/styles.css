@@ -8,6 +8,12 @@ ul {
     display: grid !important;
 }
 
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .d-grid-center {
     justify-content: center !important;
     align-items: center !important;
