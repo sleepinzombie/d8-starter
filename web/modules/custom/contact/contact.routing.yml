@@ -15,3 +15,11 @@ contact.add:
     _title: 'Add Contact Content'
   requirements:
     _permission: 'access content'
+
+contact.social_media_form:
+  path: '/admin/social_media/add'
+  defaults:
+    _form: '\Drupal\contact\Form\SocialMediaForm'
+    _title: 'Add Social Media Content'
+  requirements:
+    _access: 'TRUE'

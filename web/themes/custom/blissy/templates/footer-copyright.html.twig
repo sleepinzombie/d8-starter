@@ -1,5 +1,6 @@
 <!-- Includes -->
-{% include "@blissy/includes/partial.html.twig" %}
+{# Removing this for now #}
+{# {% include "@blissy/includes/partial.html.twig" %} #}
 
 <!-- Trying out attributes in twig templates -->
 {% set _classes =  ['red', 'green', 'blue'] %}
@@ -14,9 +15,18 @@
 
 <section id="footer-copyright">
     <div class="wrapper footer-copyright-wrapper">
-        <div class="content">
+        <div class="content copyright-sm-nl">
+            <div class="footer-copyright-socialmedia">
+                Social Media Links
+            </div>
+            <div class="footer-copyright-newsletter">
+                Newsletter
+            </div>
+        </div>
+        <div class="content copyright-text">
             <div class="footer-copyright-content">
                 <img
+                    id="copyright-image-author"
                     src="themes/custom/blissy/images/gorillaz-2d.png"
                     alt="zombie-image"
                     height="145px"
@@ -33,7 +43,6 @@
                         A project by a zombie.
                     </small>
                 </div>
-                {# <div>{{ dump(items) }}</div> #}
             </div>
         </div>
     </div>

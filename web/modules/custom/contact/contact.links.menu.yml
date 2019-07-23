@@ -4,3 +4,10 @@ contact.add:
   description: 'Add new content to the contact content.'
   parent: system.admin_custom_configurations
   route_name: contact.add
+
+# Social Icon Administrator Add Menu
+socialmedia.add:
+  title: 'Add Social Media Content'
+  description: 'Add new content to the social media content'
+  parent: system.admin_custom_configurations
+  route_name: contact.social_media_form

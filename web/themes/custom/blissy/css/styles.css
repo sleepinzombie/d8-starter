@@ -216,6 +216,12 @@ section#footer-copyright .footer-copyright-content > img {
     width: 100%;
 }
 
+@media(min-width: 992px) {
+    section#footer-copyright .footer-copyright-content > img {
+        display: none;
+    }
+}
+
 section#footer-copyright .footer-copyright-content .footer-copyright-text-content {
     margin: 1rem 0;
 }

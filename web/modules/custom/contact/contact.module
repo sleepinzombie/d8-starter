@@ -35,6 +35,9 @@ function contact_theme() {
           'image' => NULL,
       ],
     ],
+    'visitus' => [
+      'variables' => [],
+    ]
   ];
 }
 
