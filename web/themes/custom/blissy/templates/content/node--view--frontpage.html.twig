@@ -6,7 +6,9 @@
 %}
 
 <div{{ attributes.addClass(classes) }}>
-    <h2>{{ label }}</h2>
-    <p>{{ content }}</p>
-    <p>{{ author }}</p>
+    <h2 class="w-100 text-align-center">{{ label }}</h2>
+    <div class="image-wrapper">
+        {{ content.field_main_image }}
+    </div>
+    <button><a href={{ url }}>View More</a></button>
 </div>

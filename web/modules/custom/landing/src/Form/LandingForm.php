@@ -34,10 +34,19 @@ class LandingForm extends FormBase {
             '#collapsed'    =>  TRUE,
         ];
 
+        $form['landing']['heading'] = [
+            '#type'         =>  'textfield',
+            '#title'        =>  t('Main Heading'),
+            '#required'     =>  TRUE,
+            '#maxlength'    =>  128,
+            '#default_value'=>  isset($existing_values['heading'])
+                                ? $existing_values['heading']
+                                : NULL,
+        ];
+
         $form['landing']['title'] = [
             '#type'         =>  'textfield',
-            '#title'        =>  'Title',
-            '#required'     =>  TRUE,
+            '#title'        =>  t('Title'),
             '#maxlength'    =>  128,
             '#default_value'=>  isset($existing_values['title'])
                                 ? $existing_values['title']
@@ -83,6 +92,7 @@ class LandingForm extends FormBase {
      * @return void
      */
     public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+        $landing_content['heading'] = $form_state->getValue('heading');
         $landing_content['title'] = $form_state->getValue('title');
         $landing_content['content'] = $form_state->getValue('content');
 
