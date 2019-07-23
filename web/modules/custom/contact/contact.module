@@ -37,6 +37,11 @@ function contact_theme() {
     ],
     'visitus' => [
       'variables' => [],
+    ],
+    'socialmedia' => [
+      'variables' => [
+        'content' => NULL,
+      ]
     ]
   ];
 }

@@ -18,10 +18,10 @@ class SocialMediaBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $build = [];
-    $build['social_media_block']['#markup'] = 'Implement SocialMediaBlock.';
-
-    return $build;
+    return [
+      '#theme' => 'socialmedia',
+      '#content' => \Drupal::state()->get('social_media_contents'),
+    ];
   }
 
 }
