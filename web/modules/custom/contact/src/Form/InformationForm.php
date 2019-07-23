@@ -23,24 +23,37 @@ class InformationForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $state_values = \Drupal::state()->getMultiple(['title', 'content']);
+    $existing_values = \Drupal::state()->getMultiple(['title', 'content']);
 
-    $form['title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Title'),
-      '#maxlength' => 64,
-      '#size' => 64,
-      '#weight' => '0',
-      '#default_value' => $state_values['title'],
-      '#required'=> TRUE,
+    $form['contact'] = [
+      '#type'         =>  'fieldset',
+      '#title'        =>  t('Contact Block contents'),
+      '#weight'       =>  5,
+      '#collapsible'  =>  TRUE,
+      '#collapsed'    =>  TRUE,
     ];
-    $form['content'] = [
-      '#type' => 'textarea',
-      '#title' => $this->t('Content'),
-      '#weight' => '0',
-      '#default_value' => $state_values['content'],
+
+    $form['contact']['title'] = [
+      '#type'         =>  'textfield',
+      '#title'        =>  $this->t('Title'),
+      '#maxlength'    =>  64,
+      '#size'         =>  64,
+      '#weight'       =>  '0',
+      '#required'     =>  TRUE,
+      '#default_value'=>  isset($existing_values['title'])
+                          ? $existing_values['title']
+                          : NULL,
     ];
-    $form['image'] = [
+
+    $form['contact']['content'] = [
+      '#type'         =>  'textarea',
+      '#title'        =>  $this->t('Content'),
+      '#weight'       =>  '0',
+      '#default_value'=>  isset($existing_values['content'])
+                          ? $existing_values['content']
+                          : NULL,
+    ];
+    $form['contact']['image'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Image Reference'),
       '#upload_validators' => [
@@ -50,7 +63,8 @@ class InformationForm extends FormBase {
       '#preview_image_style' => 'medium',
       '#upload_location' => 'public://contact_content/',
     ];
-    $form['submit'] = [
+
+    $form['contact']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Submit'),
     ];

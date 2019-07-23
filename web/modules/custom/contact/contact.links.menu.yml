@@ -1,13 +1,6 @@
-# First level menu in backoffice (Level 1)
-system.admin_contact_custom_settings:
-  title: Contact Content
-  parent: system.admin_content
-  route_name: system.admin_contact_custom_settings
-  weight: 100
-
-# Second level menu from Level 1 (Level 2)
+# Contact Administrator Add Menu
 contact.add:
-  title: 'Add Content'
+  title: 'Add Contact Content'
   description: 'Add new content to the contact content.'
-  parent: system.admin_contact_custom_settings
+  parent: system.admin_custom_configurations
   route_name: contact.add
