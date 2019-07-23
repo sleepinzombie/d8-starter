@@ -62,10 +62,11 @@ ul {
 
 /* Header */
 header {
-    background-color: #3c3c3cde;
+    background-color: #151515;
     color: #FFFFFF;
     position: fixed;
     width: 100%;
+    z-index: 9999;
 }
 
 header .wrapper > .container {
@@ -274,4 +275,13 @@ section#footer-copyright p {
     justify-content: center;
     align-content: center;
     text-align: center;
-  }
+}
+
+/* Front page */
+.front-grid-content {
+    display: grid;
+    grid-template-columns: repeat(4, 15rem);
+    column-gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}

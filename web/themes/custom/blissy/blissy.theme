@@ -52,7 +52,7 @@ $GLOBALS['banner_title'] = [];
 function blissy_preprocess_page(array &$variables) {
   if (
     array_key_exists('#type', $variables) &&
-    $variables['page']['#type'] == 'page' &&  
+    $variables['page']['#type'] == 'page' &&
     array_key_exists('bannerblock', $variables['page']['content'])) {
     $GLOBALS['banner_title'] = $variables['page']['#title'];
   }
