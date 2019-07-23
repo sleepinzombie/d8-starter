@@ -4,7 +4,6 @@ namespace Drupal\contact\Form;
 
 use Drupal\file\Entity\File;
 use Drupal\Core\Form\FormBase;
-use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Class InformationForm.
@@ -21,8 +20,20 @@ class InformationForm extends FormBase {
 
   /**
    * {@inheritdoc}
+   * 
+   * Building the form for the information form.
+   * 
+   * It will check for any existing values in the Drupal state,
+   * and if there are any values, the method will fetch the existing
+   * values from the state and the user can edit them.
+   * 
+   * Else the method will display a fresh and new form.
+   * 
+   * @param array $form
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   * @return void
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state) {
     $existing_values = \Drupal::state()->getMultiple(['title', 'content']);
 
     $form['contact'] = [
@@ -74,8 +85,15 @@ class InformationForm extends FormBase {
 
   /**
    * {@inheritdoc}
+   * 
+   * This method will take of the necessary validations for the form
+   * 
+   * @param array $form
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   * @return void
+   * 
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
+  public function validateForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
     foreach ($form_state->getValues() as $key => $value) {
       // @TODO: Validate fields.
     }
@@ -91,8 +109,12 @@ class InformationForm extends FormBase {
    * For image, I used the file.usage service to save.
    *
    * Drupal set message from BS is used to show messages/errors.
+   * 
+   * @param array $form
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   * @return void
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
     $title = $form_state->getValue('title');
     $content = $form_state->getValue('content');
     $image_fid = $form_state->getValue('image');

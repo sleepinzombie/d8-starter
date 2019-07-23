@@ -3,7 +3,6 @@
 namespace Drupal\contact\Form;
 
 use Drupal\Core\Form\FormBase;
-use Drupal\Core\Form\FormStateInterface;
 use Exception;
 
 /**
@@ -31,10 +30,10 @@ class SocialMediaForm extends FormBase {
    * Moreover, it also loads existing data if available
    * from the Drupal state.
    * @param array $form
-   * @param FormStateInterface $form_state
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
    * @return void
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state) {
     $existing_values = \Drupal::state()->get('social_media_contents');
 
     for ($i = 1; $i < 3; $i++) {
@@ -85,10 +84,13 @@ class SocialMediaForm extends FormBase {
    * {@inheritdoc}
    *
    * Validation of the forms. Not yet implemented.
+   * 
+   * @param array $form
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
    *
    * @todo Add validations to the form if necessary
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
+  public function validateForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
     foreach ($form_state->getValues() as $key => $value) {
       // @TODO: Validate fields.
     }
@@ -104,10 +106,10 @@ class SocialMediaForm extends FormBase {
    * It makes use of a try catch block in case any error occurs.
    *
    * @param array $form
-   * @param FormStateInterface $form_state
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
    * @return void
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
     for ($i = 1; $i < 3; $i++) {
       $content[$i]['title'] = $form_state->getValue('title' .- $i);
       $content[$i]['link'] = $form_state->getValue('link' .- $i);
