@@ -76,6 +76,9 @@ class SocialMediaForm extends FormBase {
         ],
         '#preview_image_style' => 'medium',
         '#upload_location' => 'public://social_media_icons/',
+        '#default_value' => isset($existing_values[$i]['image'])
+                            ? $existing_values[$i]['image']
+                            : NULL,
       ];
     }
 
