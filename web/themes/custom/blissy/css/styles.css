@@ -149,12 +149,8 @@ header .user-account-login {
 }
 
 header .user-account-login > button.btn-user-login {
-    border-radius: 30px;
-    box-shadow: none;
-    border: none;
-    padding: 5px 15px;
-    background: aqua;
-    color: #000000;
+    padding: 0.4em 1.5em;
+    font-weight: bold;
 }
 
 /* Twigex */
