@@ -66,6 +66,17 @@ class SocialMediaForm extends FormBase {
                             ? $existing_values[$i]['link']
                             : NULL,
       ];
+
+      $form['socialmedia' .- $i]['image' .- $i] = [
+        '#type' => 'managed_file',
+        '#title' => $this->t('Social Media Icon'),
+        '#upload_validators' => [
+          'file_validate_extensions' => array('gif png jpg jpeg'),
+          'file_validate_size' => array(25600000),
+        ],
+        '#preview_image_style' => 'medium',
+        '#upload_location' => 'public://social_media_icons/',
+      ];
     }
 
     $form['socialmedia']['actions'] = [
@@ -77,6 +88,9 @@ class SocialMediaForm extends FormBase {
       '#value'        =>  t('Submit'),
     ];
 
+    // $image_service = \Drupal::service('core.image_add');
+    // $image_service->isServiceWorking();
+
     return $form;
   }
 
@@ -84,7 +98,7 @@ class SocialMediaForm extends FormBase {
    * {@inheritdoc}
    *
    * Validation of the forms. Not yet implemented.
-   * 
+   *
    * @param array $form
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *
