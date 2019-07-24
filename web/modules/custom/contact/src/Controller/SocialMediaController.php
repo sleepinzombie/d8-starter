@@ -17,7 +17,7 @@ class SocialMediaController extends ControllerBase {
    */
   public function generate() {
     return [
-      '#content' => NULL,
+      '#contents' => NULL,
     ];
   }
 

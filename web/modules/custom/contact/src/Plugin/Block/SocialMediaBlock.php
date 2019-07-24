@@ -20,7 +20,7 @@ class SocialMediaBlock extends BlockBase {
   public function build() {
     return [
       '#theme' => 'socialmedia',
-      '#content' => \Drupal::state()->get('social_media_contents'),
+      '#contents' => \Drupal::state()->get('social_media_contents'),
     ];
   }
 

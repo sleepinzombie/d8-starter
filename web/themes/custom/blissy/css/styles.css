@@ -186,7 +186,7 @@ section#footer-copyright {
 
 section#footer-copyright >  .footer-copyright-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -335,4 +335,15 @@ h4 {
     -webkit-box-shadow: 2px 5px 24px 0px rgba(189,189,189,1);
     -moz-box-shadow: 2px 5px 24px 0px rgba(189,189,189,1);
     box-shadow: 2px 5px 24px 0px rgba(189,189,189,1);
+}
+
+section#footer-copyright .copyright-sm-nl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+section#footer-copyright .social-media-items {
+    gap: 10px;
 }
