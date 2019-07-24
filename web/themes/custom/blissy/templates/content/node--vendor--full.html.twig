@@ -6,25 +6,20 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
-
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-
-  <div{{ content_attributes }}>
-    {{ content }}
-  </div>
-
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+  <div class="vendor-wrapper grid-left-right-center">
+    <div class="vendor-grid-left">
+      <h5 class="text-align-center">{{ content.field_heading }}</h5>
+      <div class="d-flex-center">
+        {{ content.field_main_image }}
       </div>
-    </footer>
-  {% endif %}
-
+    </div>
+    <div class="vendor-grid-right">
+      <h5>Description of the Vendor</h5>
+        {{ content.body }}
+      <div class="vendor-link">
+        <p>Visit the vendor's website</p>
+        {{ content.field_vendor_url }}
+      </div>
+    </div>
+  </div>
 </article>

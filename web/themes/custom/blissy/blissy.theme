@@ -94,6 +94,20 @@ function blissy_preprocess_node(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_HOOK()
+ *
+ * Preprocessing Image Styles.
+ *
+ * @param array $variables
+ * @return void
+ */
+function blissy_preprocess_image_style(&$variables) {
+  if ($variables['style_name'] == 'extra_media') {
+    $variables['image']['#attributes']['class'][] = 'image-with-box-shadow';
+  }
+}
+
+/**
  * Implements hook_form_system_theme_settings_alter().
  */
 function blissy_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {
