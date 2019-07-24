@@ -33,7 +33,7 @@ class InformationForm extends FormBase {
    * @return void
    */
   public function buildForm(array $form, \Drupal\Core\Form\FormStateInterface $form_state) {
-    $existing_values = \Drupal::state()->getMultiple(['title', 'content']);
+    $existing_values = \Drupal::state()->getMultiple(['title', 'content', 'image']);
 
     $form['contact'] = [
       '#type'         =>  'fieldset',
@@ -72,11 +72,18 @@ class InformationForm extends FormBase {
       ],
       '#preview_image_style' => 'medium',
       '#upload_location' => 'public://contact_content/',
+      '#default_value' => isset($existing_values['image'])
+                          ? $existing_values['image']
+                          : NULL,
     ];
 
-    $form['contact']['submit'] = [
-      '#type' => 'submit',
-      '#value' => $this->t('Submit'),
+    $form['contact']['actions'] = [
+      '#type'         =>  'actions',
+    ];
+
+    $form['contact']['actions']['submit'] = [
+      '#type'         =>  'submit',
+      '#value'        =>  t('Submit'),
     ];
 
     return $form;

@@ -88,9 +88,6 @@ class SocialMediaForm extends FormBase {
       '#value'        =>  t('Submit'),
     ];
 
-    // $image_service = \Drupal::service('core.image_add');
-    // $image_service->isServiceWorking();
-
     return $form;
   }
 
@@ -117,6 +114,9 @@ class SocialMediaForm extends FormBase {
    * Submitting the form fetches the value from all the fields
    * and add them to the Drupal state
    *
+   * Fetch image user selected and if an image is not choosen,
+   * it will not drop an error.
+   *
    * It makes use of a try catch block in case any error occurs.
    *
    * @param array $form
@@ -124,9 +124,17 @@ class SocialMediaForm extends FormBase {
    * @return void
    */
   public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    $image_file_service = \Drupal::service('services.image_file_add');
+
     for ($i = 1; $i < 3; $i++) {
       $content[$i]['title'] = $form_state->getValue('title' .- $i);
       $content[$i]['link'] = $form_state->getValue('link' .- $i);
+      $content[$i]['image'] = $form_state->getValue('image' .- $i);
+
+      // Simple check to add image only if user has browsed for.
+      if ($content[$i]['image']) {
+        $image_file_service->addImage($content[$i]['image'], 'contact', 'contact');
+      }
     }
 
     try {
