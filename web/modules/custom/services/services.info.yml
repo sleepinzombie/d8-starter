@@ -1,0 +1,5 @@
+name: 'services'
+type: module
+description: 'This custom module comprises of all the common methods.'
+core: 8.x
+package: 'Custom'
