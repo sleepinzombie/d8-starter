@@ -3,9 +3,9 @@
     <div class="social-media-items d-flex-center">
         {% for content in contents %}
         <div class="social-media-item">
-            <div class="social-media-title">
-                <div><a href={{ 'https://' ~ content.link }}>{{ content.title }}</a></div>
-            </div>
+            <a href={{ 'https://' ~ content.link }}>
+                <i class="fab fa-{{ content.title|lower }}"></i>
+            </a>
         </div>
         {% endfor %}
     </div>

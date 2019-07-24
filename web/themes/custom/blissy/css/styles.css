@@ -337,6 +337,10 @@ h4 {
     box-shadow: 2px 5px 24px 0px rgba(189,189,189,1);
 }
 
+section#footer-copyright a {
+    color: #FFFFFF;
+}
+
 section#footer-copyright .copyright-sm-nl {
     display: grid;
     grid-template-columns: 1fr 1fr;
