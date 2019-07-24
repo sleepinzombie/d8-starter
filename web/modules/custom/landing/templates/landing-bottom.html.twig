@@ -1,5 +1,8 @@
-<div class="landing-bottom-wrapper d-flex-center">
+<div class="landing-bottom-wrapper d-flex-center flex-column">
+    <h3>Content Types</h3>
     <div class="landing-bottom-main">
-        <div>Some bottom content here.</div>
+        {% for content_type in content_types %}
+            <button>{{ content_type }}</button>
+        {% endfor %}
     </div>
 </div>

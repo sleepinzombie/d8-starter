@@ -20,7 +20,9 @@ function landing_theme() {
         ],
       ],
       'landing_bottom' => [
-        'variables' => [],
+        'variables' => [
+          'content_types' => NULL,
+        ],
       ],
     ];
   }

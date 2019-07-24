@@ -20,7 +20,25 @@ class LandingBottom extends BlockBase {
   public function build() {
     return [
       '#theme' => 'landing_bottom',
+      '#content_types' => $this->fetchContentTypes(),
     ];
   }
+
+  /**
+   * Fetching of all content types from backoffice.
+   *
+   * @return void
+   */
+  public function fetchContentTypes() {
+    $content_types_array = [];
+    $content_types = \Drupal\node\Entity\NodeType::loadMultiple();
+    foreach ($content_types as $content_type) {
+      $content_types_array[$content_type->id()] = $content_type->label();
+      // Get the link to the node here.
+    }
+
+    return $content_types_array;
+  }
+
 
 }

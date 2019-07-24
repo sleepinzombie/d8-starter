@@ -20,6 +20,14 @@ ul {
     align-items: center;
 }
 
+.flex-column {
+    flex-direction: column !important;
+}
+
+.flex-row {
+    flex-direction: row !important;
+}
+
 .d-grid-center {
     justify-content: center !important;
     align-items: center !important;
@@ -339,6 +347,14 @@ h4 {
     box-shadow: 2px 5px 24px 0px rgba(189,189,189,1);
 }
 
+.landing-bottom-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* Footer */
 section#footer-copyright a {
     color: #FFFFFF;
 }
