@@ -347,3 +347,7 @@ section#footer-copyright .copyright-sm-nl {
 section#footer-copyright .social-media-items {
     gap: 10px;
 }
+
+section#footer-copyright .newsletter-wrapper input {
+    color: #000000;
+}

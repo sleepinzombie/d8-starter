@@ -42,6 +42,9 @@ function contact_theme() {
       'variables' => [
         'contents' => NULL,
       ]
+    ],
+    'newsletter' => [
+      'variables' => [],
     ]
   ];
 }
