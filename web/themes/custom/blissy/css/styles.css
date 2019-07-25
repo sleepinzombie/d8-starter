@@ -1,4 +1,8 @@
 /* Global */
+* {
+    transition: all 0.5s;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -147,7 +151,8 @@ header li > a {
 }
 
 header li > a:hover {
-    background-color: #000000;
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
 header .red-heading {

@@ -34,7 +34,6 @@ class LandingBottom extends BlockBase {
     $content_types = \Drupal\node\Entity\NodeType::loadMultiple();
     foreach ($content_types as $content_type) {
       $content_types_array[$content_type->id()] = $content_type->label();
-      // Get the link to the node here.
     }
 
     return $content_types_array;
