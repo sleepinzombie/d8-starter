@@ -21,6 +21,9 @@ class SliderBlock extends BlockBase {
         return [
             '#theme' => 'landing_slider',
             '#slider_contents' => $this->fetchSliderContents(),
+            '#attached' => [
+                'library' => ['landing/slider'],
+            ],
         ];
     }
 
