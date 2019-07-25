@@ -2,6 +2,6 @@ services:
   logger.channel.services:
     parent: logger.channel_base
     arguments: ['services']
-  services.image_file_add:
+  services.image_file_custom:
     class: Drupal\services\ImageFileService
     arguments: []

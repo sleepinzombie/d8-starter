@@ -127,7 +127,7 @@ class SocialMediaForm extends FormBase {
    * @return void
    */
   public function submitForm(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-    $image_file_service = \Drupal::service('services.image_file_add');
+    $image_file_service = \Drupal::service('services.image_file_custom');
 
     for ($i = 1; $i < 3; $i++) {
       $content[$i]['title'] = $form_state->getValue('title' .- $i);

@@ -34,4 +34,20 @@ class ImageFileService {
       drupal_set_message(t('An error occured while uploading the image.'), 'error');
     }
   }
+
+  /**
+   * Getting the uri of an image using
+   * the image itself.
+   *
+   * @param File $image
+   * @return void
+   */
+  public function getUriFromImage(File $image = null) {
+    if (!empty($image) && !is_null($image)) {
+      $image_uri = $image->getFileUri();
+      return $image_uri;
+    } else {
+      return;
+    }
+  }
 }

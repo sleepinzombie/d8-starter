@@ -1,8 +1,17 @@
 <div class="landing-slider-wrapper">
-    {% for slider_content in slider_contents %}
+    {# {% for slider_content in slider_contents %}
         <div class="landing-slider-item text-align-center">
             <div class="landing-slider-title">{{ slider_content.title }}</div>
             <div class="landing-slider-description">{{ slider_content.description }}</div>
+            <img src={{ file_url(slider_content.image) }} alt={{ 'img-alt-text' ~ slider_content.title] }}>
         </div>
-    {% endfor %}
+    {% endfor %} #}
+
+    {# START: This is just a hardcoded div to style the slider #}
+    <div class="landing-slider-item text-align-center">
+        <div class="landing-slider-title">Title</div>
+        <div class="landing-slider-description">Lorem Ipsum dolor and so on and on and on and okay..</div>
+    </div>
+    {# END #}
+
 </div>

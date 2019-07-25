@@ -125,7 +125,7 @@ class InformationForm extends FormBase {
     $content = $form_state->getValue('content');
     $image_fid = $form_state->getValue('image');
 
-    $image_file_service = \Drupal::service('services.image_file_add');
+    $image_file_service = \Drupal::service('services.image_file_custom');
     $image_file_service->addImage($image_fid, 'contact', 'contact');
 
     $state_form_variables = [

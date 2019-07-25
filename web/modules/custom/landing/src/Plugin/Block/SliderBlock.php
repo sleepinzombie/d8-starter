@@ -16,6 +16,7 @@ class SliderBlock extends BlockBase {
 
     const SLIDER_CONTENT_VIEW = 'view_landing_slider';
     const SLIDER_BLOCK_VIEW = 'block_1';
+    const IMAGE_FILE_SERVICE = 'services.image_file_custom';
 
     public function build() {
         return [
@@ -44,10 +45,13 @@ class SliderBlock extends BlockBase {
             $id = strtolower($title);
             $description = $v->_entity->get('field_slider_description')->getValue()[0]['value'];
             $link = $v->_entity->get('field_slider_link')->getValue()[0]['uri'];
+            $image = \Drupal::service(self::IMAGE_FILE_SERVICE)
+                ->getUriFromImage($v->_entity->get('field_slider_image')->entity);
             $slider_contents[$id] = [
                 'title' => $title,
                 'description' => $description,
                 'link' => $link,
+                'image' => $image,
             ];
         }
 
