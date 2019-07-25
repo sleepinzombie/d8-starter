@@ -1,0 +1,8 @@
+<div class="landing-slider-wrapper">
+    {% for slider_content in slider_contents %}
+        <div class="landing-slider-item">
+            <div class="landing-slider-title">{{ slider_content.title }}</div>
+            <div class="landing-slider-description">{{ slider_content.description }}</div>
+        </div>
+    {% endfor %}
+</div>

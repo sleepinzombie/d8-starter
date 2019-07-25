@@ -24,5 +24,10 @@ function landing_theme() {
           'content_types' => NULL,
         ],
       ],
+      'landing_slider' => [
+        'variables' => [
+          'slider_contents' => NULL,
+        ],
+      ]
     ];
   }

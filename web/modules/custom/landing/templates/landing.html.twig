@@ -2,6 +2,11 @@
     <div class="landing-heading-wrapper">
         <h4>{{ content['heading'] }}</h4>
     </div>
+
+    {# START OF: Slider Block #}
+    <dd class="ml-0">{{ drupal_block('slider_block') }}</dd>
+    {# END OF: Slider Block #}
+
     <h6>{{ content['title'] }}</h6>
     <div class="landing-content-body-text">
         {{ content['content']['value']|raw }}
