@@ -1,0 +1,13 @@
+# Library used by the `SocialMedia` block
+socialmedia:
+  version: 1.x
+  css:
+    theme:
+      css/_social.css: {}
+
+# Library used by the `Newsletter` block
+newsletter:
+  version: 1.x
+  css:
+    theme:
+      css/_newsletter.css: {}

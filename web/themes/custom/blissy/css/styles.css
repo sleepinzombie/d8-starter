@@ -360,20 +360,9 @@ h4 {
 }
 
 /* Footer */
-section#footer-copyright a {
-    color: #FFFFFF;
-}
 
 section#footer-copyright .copyright-sm-nl {
     justify-content: center;
-}
-
-section#footer-copyright .social-media-items {
-    gap: 10px;
-}
-
-section#footer-copyright .newsletter-wrapper input {
-    color: #000000;
 }
 
 article.node-vendors .vendor-grid-right {

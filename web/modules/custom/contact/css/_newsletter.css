@@ -1,0 +1,5 @@
+/* This whole CSS file is reserved for the `NewsletterBlock` block */
+
+section#footer-copyright .newsletter-wrapper input {
+    color: #000000;
+}

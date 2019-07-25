@@ -1,0 +1,9 @@
+/* This whole CSS file is reserved for the `SocialMediaBlock` block */
+
+section#footer-copyright .social-media-items {
+    gap: 10px;
+}
+
+section#footer-copyright a {
+    color: #FFFFFF;
+}
