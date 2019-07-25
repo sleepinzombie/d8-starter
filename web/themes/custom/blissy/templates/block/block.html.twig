@@ -36,7 +36,12 @@
     ]
 %}
 <div{{ attributes.addClass(classes) }}>
-    <div class="block-wrapper">
+    <div {% if not attributes.hasClass('blocklanding-example') %}
+         class="block-wrapper"
+         {% else %}
+         class="block-no-wrapper"
+         {% endif %}
+         >
         {{ title_prefix }}
         {% if label %}
         <h2 class="heading-2">{{ label }}</h2>

@@ -336,6 +336,11 @@ h4 {
     margin: 1.5rem auto;
 }
 
+.block-no-wrapper {
+    width: 100vw;
+    overflow: hidden;
+}
+
 /* Front page */
 .front-grid-content {
     display: grid;
