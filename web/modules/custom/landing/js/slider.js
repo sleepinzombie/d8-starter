@@ -76,7 +76,7 @@ let loadRandom = true;
 		 * Currently disabled. Use if you do not
 		 * want any random image getting active.
 		 */
-		//$('.slides div:first-child').addClass('active');
+		// $('.slides .slide:first-child').addClass('active');
 
 		/* Set a random image as the first one. will change each time the page loads. */
 		if (loadRandom) {
@@ -113,15 +113,15 @@ let loadRandom = true;
 		 */
 		function previousSlide() {
 			/* Find which image we're on and remove the active class. */
-			var pos = $('.active').prevAll().length;
+			var pos = $('.active').prev().length;
 			$('.active').removeClass('active');
 
 			if (pos == 0) { /* We're on the first slide, so need to loop. */
 				$('.slides').stop().animate({marginLeft:-positions[positions.length-1]+'px'},slideSpeed);
-				$('.slides:nth-child(' +positions.length+ ')').addClass('active');
+				$('.slides :nth-child(' +positions.length+ ')').addClass('active');
 			} else {
 				$('.slides').stop().animate({marginLeft:-positions[pos-1]+'px'},slideSpeed);
-				$('.slides:nth-child(' +pos+ ')').addClass('active');
+				$('.slides .slide:nth-child(' +pos+ ')').addClass('active');
 			}
 		}
 
@@ -130,12 +130,12 @@ let loadRandom = true;
 		 */
 		function nextSlide() {
 			/* Find which image we're on and remove the active class. */
-			var pos = $('.active').prev().length;
+			var pos = $('.active').prevAll().length;
 			$('.active').removeClass('active');
 
 			if (pos == positions.length - 1) { /* We're on the last slide, so need to loop */
 				$('.slides').stop().animate({marginLeft:-positions[0]+'px'},slideSpeed);
-				$('.slides:nth-child(0)').addClass('active');
+				$('.slides :nth-child(0)').addClass('active');
 			} else {
 				$('.slides').stop().animate({marginLeft:-positions[pos+1]+'px'},slideSpeed);
 				$('.slides .slide:nth-child(' +(pos+2)+ ')').addClass('active');
