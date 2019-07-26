@@ -7,7 +7,9 @@
                 <div class="landing-slider-text-content text-align-center">
                     <div class="landing-slider-title">{{ slider_content.title }}</div>
                     <div class="landing-slider-description">{{ slider_content.description }}</div>
-                    <button class="landing-slider-button d-grid d-grid-center" >Learn More</button>
+                    <button class="landing-slider-button d-grid d-grid-center" >
+                        <a href={{ slider_content.link }}>Learn More</a>
+                    </button>
                 </div>
             </div>
             {% endfor %}

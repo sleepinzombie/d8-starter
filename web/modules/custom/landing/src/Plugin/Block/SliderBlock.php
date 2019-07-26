@@ -3,6 +3,7 @@
 namespace Drupal\landing\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Url as DrupalCoreUrl;
 
 /**
  * Provides a 'SliderBlock' block.
@@ -50,7 +51,7 @@ class SliderBlock extends BlockBase {
             $slider_contents[$id] = [
                 'title' => $title,
                 'description' => $description,
-                'link' => $link,
+                'link' => DrupalCoreUrl::fromUri($link),
                 'image' => $image,
             ];
         }
