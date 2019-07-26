@@ -15,33 +15,33 @@
 
 <section id="footer-copyright">
     <div class="wrapper footer-copyright-wrapper">
-        <div class="grid-left-right-center content copyright-sm-nl">
+        <div class="d-grid d-grid-center grid-3grids content copyright-sm-nl">
             <div class="footer-copyright-socialmedia">
                 <dd class="ml-0">{{ drupal_block('social_media_block') }}</dd>
             </div>
             <div class="footer-copyright-newsletter">
                 <dd class="ml-0">{{ drupal_block('newsletter_block') }}</dd>
             </div>
-        </div>
-        <div class="content copyright-text">
-            <div class="footer-copyright-content">
-                <img
-                    id="copyright-image-author"
-                    src="themes/custom/blissy/images/gorillaz-2d.png"
-                    alt="zombie-image"
-                    height="145px"
-                    width="145px"
-                >
-                <div class="footer-copyright-text-content">
-                    <div>Copyright© 2019</div>
-                    <small{{ attributes
-                                .setAttribute('class', _attributes_class)
-                                .addClass(_classes)
-                                .removeClass('green')
-                                .setAttribute('id', _attributes_id)
-                            }}>
-                        A project by a zombie.
-                    </small>
+            <div class="content copyright-text">
+                <div class="footer-copyright-content">
+                    <img
+                        id="copyright-image-author"
+                        src="themes/custom/blissy/images/gorillaz-2d.png"
+                        alt="zombie-image"
+                        height="145px"
+                        width="145px"
+                    >
+                    <div class="footer-copyright-text-content">
+                        <div>Copyright© 2019</div>
+                        <small{{ attributes
+                                    .setAttribute('class', _attributes_class)
+                                    .addClass(_classes)
+                                    .removeClass('green')
+                                    .setAttribute('id', _attributes_id)
+                                }}>
+                            A project by a zombie.
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>
