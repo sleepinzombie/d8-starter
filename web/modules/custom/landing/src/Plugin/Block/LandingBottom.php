@@ -9,7 +9,7 @@ use Drupal\Core\Block\BlockBase;
  *
  * @Block(
  *  id = "landing_bottom",
- *  admin_label = @Translation("Landing bottom"),
+ *  admin_label = @Translation("Landing Bottom"),
  * )
  */
 class LandingBottom extends BlockBase {

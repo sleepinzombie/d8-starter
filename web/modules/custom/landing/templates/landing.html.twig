@@ -4,12 +4,12 @@
     <dd class="ml-0">{{ drupal_block('slider_block') }}</dd>
     {# END OF: Slider Block #}
 
-    <div class="landing-heading-wrapper">
-        <h4>{{ content['heading'] }}</h4>
-    </div>
-
-    <h6>{{ content['title'] }}</h6>
-    <div class="landing-content-body-text">
-        {{ content['content']['value']|raw }}
+    <div class="block-wrapper d-grid d-grid-center text-align-center landing-message-grid">
+        <div class="landing-heading-wrapper">
+            <h2>{{ content['heading'] }}</h2>
+        </div>
+        <div class="landing-content-body-text">
+            {{ content['content']['value']|raw }}
+        </div>
     </div>
 </div>

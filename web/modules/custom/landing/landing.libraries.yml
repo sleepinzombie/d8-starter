@@ -3,6 +3,7 @@ slider:
   css:
     theme:
       css/_slider.css: {}
+      css/_landing.css: {}
   js:
     js/slider.js: {}
   dependencies:

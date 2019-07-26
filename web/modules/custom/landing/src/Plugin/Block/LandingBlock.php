@@ -9,8 +9,8 @@ use Drupal\Core\Block\BlockBase;
  *
  * @Block(
  *   id = "landing_example",
- *   admin_label = @Translation("Example"),
- *   category = @Translation("landing")
+ *   admin_label = @Translation("Landing Block"),
+ *   category = @Translation("Landing")
  * )
  */
 class LandingBlock extends BlockBase {

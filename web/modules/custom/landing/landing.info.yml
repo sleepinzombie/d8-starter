@@ -1,4 +1,4 @@
-name: landing
+name: Landing
 type: module
 description: This is a custom module with a block to display on the homepage for the landing situation.
 package: Custom

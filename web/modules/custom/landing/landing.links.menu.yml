@@ -7,7 +7,7 @@ system.admin_custom_configurations:
 
 # Second level menu from Level 1 (Level 2)
 landing.add:
-  title: 'Add Landing Content'
-  description: 'Add new content to the landing content.'
+  title: 'Modify Landing Content'
+  description: 'Add new or edit existing content to the landing content.'
   parent: system.admin_custom_configurations
   route_name: landing.add
