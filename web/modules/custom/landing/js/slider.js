@@ -1,4 +1,12 @@
 /**
+ * This `slider.js` file is reserved for the slider functionalities
+ *
+ * Some help were taken online
+ *
+ * @author Divesh H
+ */
+
+/**
  * Changes the rate at which the image slide.
  *
  * The bigger the number, the slower it is.
@@ -40,52 +48,53 @@ let loadRandom = true;
 
 (function ($) {
 	$(document).ready(function() {
-		console.log('The slider.js is loaded here.');
+		console.log('The slider.js is loaded on this page.');
 
 	   	var totWidth = 0;
 		var positions = new Array();
 
-		/* Loop through all the slides and store their accumulative widths in totWidth */
+		/* Loop through all the slides and store their accumulative widths in totWidth. */
 		$('.slides .slide').each(function(i){
-			/* The positions array contains each slide's commulutative offset from the left part of the container */
-			positions[i]= totWidth;
+			/* The positions array contains each slide's commulutative offset from the left part of the container. */
+			positions[i] = totWidth;
 			totWidth += $(this).width();
 
-			/* Notify if there is no width defined in HTML */
-			if(!$(this).width())
-			{
+			/* Notify if there is no width defined in HTML. */
+			if(!$(this).width()) {
 				alert("Please, fill in width & height for all your images!");
 				return false;
 			}
 		});
 
-
-		/* Change the cotnainer div's width to the exact width of all the slides combined */
+		/* Change the cotnainer div's width to the exact width of all the slides combined. */
 		$('.slides').width(totWidth);
 
 
-		/* Set the first image to active */
+		/**
+		 * Set the first image to active.
+		 *
+		 * Currently disabled. Use if you do not
+		 * want any random image getting active.
+		 */
 		//$('.slides div:first-child').addClass('active');
 
-		// Set a random image as the first one. will change each time the page loads
+		/* Set a random image as the first one. will change each time the page loads. */
 		if (loadRandom) {
 			firstImg = Math.floor(Math.random()*(positions.length));
-			$('.slides div:nth-child(' +(firstImg+1)+ ')').addClass('active');
+			$('.slides .slide:nth-child(' +(firstImg+1)+ ')').addClass('active');
 			$('.slides').css({marginLeft:-positions[firstImg]+'px'});
 		}
-
 
 		if (autoSlide) {
 			function startTimer() {
 				nextSlide();
-				var timer=setTimeout(startTimer,autoSlideTimer);
+				var timer = setTimeout(startTimer,autoSlideTimer);
 			}
 			startTimer();
 		}
 
-
+		/* Set up the next button actions */
 		$('#menu a.next').click(function(e){
-			/* Prevent the default action of the link */
 			e.preventDefault();
 			nextSlide();
 		});
@@ -93,41 +102,43 @@ let loadRandom = true;
 
 		/* Set up the previous button actions */
 		$('#menu a.previous').click(function(e){
-			/* Prevent the default action of the link */
 			e.preventDefault();
 			previousSlide();
 		});
 
-
+		/**
+		 * Go to the previous slide.
+		 *
+		 * Some little changes happened here.
+		 */
 		function previousSlide() {
-			/* Find which image we're on and remove the active class */
+			/* Find which image we're on and remove the active class. */
 			var pos = $('.active').prevAll().length;
 			$('.active').removeClass('active');
 
-			if (pos == 0) {		/* We're on the first slide, so need to loop */
+			if (pos == 0) { /* We're on the first slide, so need to loop. */
 				$('.slides').stop().animate({marginLeft:-positions[positions.length-1]+'px'},slideSpeed);
-				$('.slides div:nth-child(' +positions.length+ ')').addClass('active');
-			}
-			else {
+				$('.slides:nth-child(' +positions.length+ ')').addClass('active');
+			} else {
 				$('.slides').stop().animate({marginLeft:-positions[pos-1]+'px'},slideSpeed);
-				$('.slides div:nth-child(' +pos+ ')').addClass('active');
+				$('.slides:nth-child(' +pos+ ')').addClass('active');
 			}
 		}
 
-
+		/**
+		 * Go to the next slide.
+		 */
 		function nextSlide() {
-			/* Find which image we're on and remove the active class */
-			var pos = $('.active').prevAll().length;
+			/* Find which image we're on and remove the active class. */
+			var pos = $('.active').prev().length;
 			$('.active').removeClass('active');
 
-
-			if (pos == positions.length-1) {		/* We're on the last slide, so need to loop */
+			if (pos == positions.length - 1) { /* We're on the last slide, so need to loop */
 				$('.slides').stop().animate({marginLeft:-positions[0]+'px'},slideSpeed);
-				$('.slides div:nth-child(0)').addClass('active');
-			}
-			else {
+				$('.slides:nth-child(0)').addClass('active');
+			} else {
 				$('.slides').stop().animate({marginLeft:-positions[pos+1]+'px'},slideSpeed);
-				$('.slides div:nth-child(' +(pos+2)+ ')').addClass('active');
+				$('.slides .slide:nth-child(' +(pos+2)+ ')').addClass('active');
 			}
 		}
 	});
