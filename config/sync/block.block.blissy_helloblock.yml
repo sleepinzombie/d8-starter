@@ -1,0 +1,20 @@
+uuid: b792bb0a-04e9-4c2c-b31f-c3bf74d8a5fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - helloworld
+  theme:
+    - blissy
+id: blissy_helloblock
+theme: blissy
+region: header
+weight: 0
+provider: null
+plugin: hello_block
+settings:
+  id: hello_block
+  label: 'Hello block'
+  provider: helloworld
+  label_display: visible
+visibility: {  }

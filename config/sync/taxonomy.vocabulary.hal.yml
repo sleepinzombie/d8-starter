@@ -1,0 +1,8 @@
+uuid: a50c7c87-45fa-4cbe-93ce-81b2385dab77
+langcode: en
+status: true
+dependencies: {  }
+name: Hal
+vid: hal
+description: 'Is the ingredient Halal or Haraam?'
+weight: 0

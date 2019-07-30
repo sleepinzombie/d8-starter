@@ -1,0 +1,22 @@
+uuid: e286639d-6e90-4a7b-9973-27822c7701ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bliss
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: bliss_powered
+theme: bliss
+region: footer
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

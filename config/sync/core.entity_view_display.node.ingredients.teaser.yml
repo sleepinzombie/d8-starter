@@ -1,0 +1,35 @@
+uuid: 36f3e685-f36b-4331-9e0d-fd473f4a20a9
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ingredients.body
+    - field.field.node.ingredients.field_ingredient_name
+    - field.field.node.ingredients.field_ingredient_type
+    - node.type.ingredients
+  module:
+    - text
+    - user
+id: node.ingredients.teaser
+targetEntityType: node
+bundle: ingredients
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ingredient_name: true
+  field_ingredient_type: true
+  langcode: true

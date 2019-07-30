@@ -1,0 +1,24 @@
+uuid: cdd8a210-1f6c-4b9d-b040-3a245626d80d
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.recipes
+  module:
+    - views
+  theme:
+    - custom
+id: custom_views_block__recipes_block_1
+theme: custom
+region: headline
+weight: 0
+provider: null
+plugin: 'views_block:recipes-block_1'
+settings:
+  id: 'views_block:recipes-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

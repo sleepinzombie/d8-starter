@@ -1,0 +1,22 @@
+uuid: cacfb3a8-eadb-467f-b375-1e7942b3aa5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bliss
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: bliss_search
+theme: bliss
+region: header
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

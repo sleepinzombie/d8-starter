@@ -1,0 +1,22 @@
+uuid: fc9ede8e-730d-42e1-bcee-964474c87619
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bliss
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: bliss_help
+theme: bliss
+region: header
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

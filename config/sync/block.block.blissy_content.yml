@@ -1,0 +1,22 @@
+uuid: acd12c37-9dca-452d-bb25-ce2c9c1a0eee
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - blissy
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: blissy_content
+theme: blissy
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

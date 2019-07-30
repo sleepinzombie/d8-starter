@@ -1,0 +1,20 @@
+uuid: 93364893-cecf-4a8e-a923-783c1142b76c
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - blissy
+id: blissy_poweredbydrupal
+theme: blissy
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: c40c3836-2f6c-4338-a194-bcc8d4eb20a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - banner
+    - system
+  theme:
+    - blissy
+id: bannerblock
+theme: blissy
+region: content
+weight: 0
+provider: null
+plugin: banner_block
+settings:
+  id: banner_block
+  label: 'Banner Block'
+  provider: banner
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/products\r\n/vendors\r\n/ingredients"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,26 @@
+uuid: 1b445355-50cb-4c5f-92d9-6c0659c30886
+langcode: en
+status: false
+dependencies:
+  module:
+    - contact
+    - system
+  theme:
+    - blissy
+id: socialmediablock
+theme: blissy
+region: footer
+weight: 0
+provider: null
+plugin: social_media_block
+settings:
+  id: social_media_block
+  label: 'Social media block'
+  provider: contact
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

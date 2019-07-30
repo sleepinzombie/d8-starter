@@ -1,0 +1,25 @@
+uuid: 5f770257-3003-4bc7-9347-479bb4198131
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:bddfb3ee-72d8-4489-b150-2ccd37860855'
+  module:
+    - block_content
+  theme:
+    - blissy
+id: blissy_hoursandlocationblock
+theme: blissy
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:bddfb3ee-72d8-4489-b150-2ccd37860855'
+settings:
+  id: 'block_content:bddfb3ee-72d8-4489-b150-2ccd37860855'
+  label: 'Hours and Location'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

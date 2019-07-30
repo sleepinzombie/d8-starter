@@ -1,0 +1,14 @@
+uuid: da98e825-7d0c-4836-a30c-31c673118f29
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.vendor
+  module:
+    - user
+id: user_add_role_action.vendor
+label: 'Add the Vendor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: vendor

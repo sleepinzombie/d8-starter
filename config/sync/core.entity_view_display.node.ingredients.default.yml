@@ -1,0 +1,46 @@
+uuid: d5dd5906-c6c7-48f2-bb84-670df0e1279a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ingredients.body
+    - field.field.node.ingredients.field_ingredient_name
+    - field.field.node.ingredients.field_ingredient_type
+    - node.type.ingredients
+  module:
+    - text
+    - user
+id: node.ingredients.default
+targetEntityType: node
+bundle: ingredients
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ingredient_name:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ingredient_type:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

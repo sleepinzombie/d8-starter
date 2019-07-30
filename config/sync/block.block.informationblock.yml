@@ -1,0 +1,26 @@
+uuid: 68dbb536-1b50-4be4-9c37-5797d79f6f67
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - system
+  theme:
+    - blissy
+id: informationblock
+theme: blissy
+region: content
+weight: 0
+provider: null
+plugin: information_block
+settings:
+  id: information_block
+  label: 'Information block'
+  provider: contact
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

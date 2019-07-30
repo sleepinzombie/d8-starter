@@ -1,0 +1,28 @@
+uuid: 750ce6cd-9abc-4d9c-8ebe-bc2598f8093a
+langcode: en
+status: false
+dependencies:
+  module:
+    - language
+  theme:
+    - blissy
+id: blissy_languageswitcher
+theme: blissy
+region: header
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Choose Language'
+  provider: language
+  label_display: visible
+visibility:
+  language:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

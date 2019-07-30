@@ -1,0 +1,12 @@
+uuid: bba20b98-ff45-4c57-a692-dd3bed5936e9
+langcode: en
+status: true
+dependencies: {  }
+name: black_and_white
+label: Desaturated
+effects:
+  822e8cc8-6fd5-4f97-9d4e-e9091add6bd1:
+    uuid: 822e8cc8-6fd5-4f97-9d4e-e9091add6bd1
+    id: image_desaturate
+    weight: 1
+    data: {  }

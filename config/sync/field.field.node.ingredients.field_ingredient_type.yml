@@ -1,0 +1,29 @@
+uuid: 9dd204fe-bbdb-431e-937b-fea7c553170c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingredient_type
+    - node.type.ingredients
+    - taxonomy.vocabulary.hal
+id: node.ingredients.field_ingredient_type
+field_name: field_ingredient_type
+entity_type: node
+bundle: ingredients
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hal: hal
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

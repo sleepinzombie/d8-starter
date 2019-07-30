@@ -1,0 +1,26 @@
+uuid: e4adb024-e725-4f4b-b37a-26c4268f015c
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - system
+  theme:
+    - blissy
+id: visitusblock
+theme: blissy
+region: footer
+weight: 0
+provider: null
+plugin: visit_us_block
+settings:
+  id: visit_us_block
+  label: 'Visit us block'
+  provider: contact
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

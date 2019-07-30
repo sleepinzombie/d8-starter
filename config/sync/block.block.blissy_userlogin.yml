@@ -1,0 +1,20 @@
+uuid: 72903064-e56d-4a63-8f48-1e782db4335e
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - blissy
+id: blissy_userlogin
+theme: blissy
+region: header
+weight: -7
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

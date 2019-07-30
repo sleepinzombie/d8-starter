@@ -1,0 +1,20 @@
+uuid: f7ca0387-1e05-477c-b7ed-1d8292e9c4ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - helloworld
+  theme:
+    - custom
+id: helloblock
+theme: custom
+region: footer
+weight: 0
+provider: null
+plugin: hello_block
+settings:
+  id: hello_block
+  label: 'Hello block'
+  provider: helloworld
+  label_display: visible
+visibility: {  }

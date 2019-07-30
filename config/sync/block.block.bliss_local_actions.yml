@@ -1,0 +1,20 @@
+uuid: 2b9f1b75-8268-4959-8235-030959f768f7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bliss
+_core:
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: bliss_local_actions
+theme: bliss
+region: header
+weight: 20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

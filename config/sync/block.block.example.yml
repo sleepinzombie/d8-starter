@@ -1,0 +1,26 @@
+uuid: 804f308e-24fa-4366-bfac-c9da459a7e58
+langcode: en
+status: true
+dependencies:
+  module:
+    - landing
+    - system
+  theme:
+    - blissy
+id: example
+theme: blissy
+region: content
+weight: 0
+provider: null
+plugin: landing_example
+settings:
+  id: landing_example
+  label: Information
+  provider: landing
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

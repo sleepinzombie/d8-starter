@@ -1,0 +1,47 @@
+uuid: 83a28969-376c-4554-b7db-84f13c506603
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.enumber_content_type.body
+    - field.field.node.enumber_content_type.field_code
+    - field.field.node.enumber_content_type.field_title
+    - node.type.enumber_content_type
+  module:
+    - text
+    - user
+id: node.enumber_content_type.default
+targetEntityType: node
+bundle: enumber_content_type
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_code:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,26 @@
+uuid: ff786416-7357-4e6a-98c0-876f271289db
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - workwithviews
+  theme:
+    - blissy
+id: workwithviewsblock
+theme: blissy
+region: content
+weight: 0
+provider: null
+plugin: work_with_views_block
+settings:
+  id: work_with_views_block
+  label: 'Work with views block'
+  provider: workwithviews
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /workwithviews
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,8 @@
+uuid: 47a08dde-249d-49f3-9404-84beaebe66ce
+langcode: en
+status: true
+dependencies: {  }
+name: 'Products Type'
+vid: products_type
+description: 'The different types of products.'
+weight: 0

@@ -1,0 +1,22 @@
+uuid: 3d80aab3-12c9-4984-899c-7d6cd028926f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bliss
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: bliss_content
+theme: bliss
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

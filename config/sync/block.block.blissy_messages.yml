@@ -1,0 +1,22 @@
+uuid: c82ffcb6-28b0-43b1-8e4f-1a1b95e9ed9a
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - blissy
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: blissy_messages
+theme: blissy
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

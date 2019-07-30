@@ -1,0 +1,26 @@
+uuid: 8ba88049-dc33-4dd4-941c-b3d75b093dd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - landing
+    - system
+  theme:
+    - blissy
+id: landingbottom
+theme: blissy
+region: content
+weight: 0
+provider: null
+plugin: landing_bottom
+settings:
+  id: landing_bottom
+  label: 'Landing bottom'
+  provider: landing
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

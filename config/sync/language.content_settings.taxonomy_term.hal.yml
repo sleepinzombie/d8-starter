@@ -1,0 +1,11 @@
+uuid: bace1fa2-9c3e-4d29-b66c-58b764eef903
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.hal
+id: taxonomy_term.hal
+target_entity_type_id: taxonomy_term
+target_bundle: hal
+default_langcode: site_default
+language_alterable: false
