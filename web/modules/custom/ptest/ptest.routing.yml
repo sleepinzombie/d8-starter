@@ -1,7 +1,0 @@
-ptest.example:
-  path: '/ptest/example'
-  defaults:
-    _title: 'Example'
-    _controller: '\Drupal\ptest\Controller\PtestController::build'
-  requirements:
-    _permission: 'access content'
