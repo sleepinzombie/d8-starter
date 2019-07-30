@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override for tabs.
+ * Include all your custom tab changes here.
+ */
+#}
+{% block content %}
+  {% if content %}
+    <div class="navigation-tabs">
+      <nav class="tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
+        {{ content }}
+      </nav>
+    </div>
+  {% endif %}
+{% endblock %}
