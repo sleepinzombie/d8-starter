@@ -10,3 +10,5 @@ global-scripts:
     js/blissy.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
+    - core/drupalSettings

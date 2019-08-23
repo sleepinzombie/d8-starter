@@ -1,6 +1,6 @@
 
 enumbers.e_numbers_controller_generate:
-  path: '/enumbers/test'
+  path: '/enumbers/'
   defaults:
     _controller: '\Drupal\enumbers\Controller\ENumbersController::generate'
     _title: 'ENumbers'

@@ -1,6 +1,7 @@
 <?php
 
 use \Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\Html;
 
 /**
  * @global array Global variable for banner title
@@ -105,6 +106,17 @@ function blissy_preprocess_image_style(&$variables) {
   if ($variables['style_name'] == 'extra_media') {
     $variables['image']['#attributes']['class'][] = 'image-with-box-shadow';
   }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function blissy_preprocess_views_view_table(&$variables) {
+  // $route = \Drupal::routeMatch()->getParameters();
+  $view = $variables['view'];
+  //$variables['attributes']['class'] = Html::cleanCssIdentifier($view->id());
+
+  //view-enumbers views-table blissy-views-table views-view-table cols-4 sticky-enabled
 }
 
 /**

@@ -74,6 +74,14 @@ ul {
     margin-left: 0 !important;
 }
 
+/* Blissy Views Tables */
+.blissy-views-table {
+    display: grid;
+    width: 100%;
+    gap: 15px;
+    border: 1px solid #000000;
+}
+
 /* Testing purposes */
 .red {
     color: red;
