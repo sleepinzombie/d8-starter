@@ -1,0 +1,9 @@
+<h6>List of Terms</h6>
+{% for taxonomy in var.taxonomies %}
+	<div class="taxonomy-name">{{ taxonomy.name }}</div>
+{% endfor %}
+
+<h6>List of Vocabularies</h6>
+{% for vocabulary in var.taxonomies.labels %}
+	<div class="vocabulary-label">{{ vocabulary }}</div>
+{% endfor %}

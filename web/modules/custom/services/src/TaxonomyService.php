@@ -2,6 +2,8 @@
 
 namespace Drupal\services;
 
+use Drupal\taxonomy\Entity\Vocabulary;
+
 /**
  * Class TaxonomyService.
  */
@@ -45,5 +47,15 @@ class TaxonomyService {
 			};
 		};
 		return $taxonomies;
+	}
+
+	public function get_taxonomy_vocabularies_names() {
+		$vocabularies = Vocabulary::loadMultiple();
+		kint($vocabularies);
+		$vocabularies_names = [];
+		foreach ($vocabularies as $vocabulary) {
+			array_push($vocabularies_names, $vocabulary->label());
+		}
+		return $vocabularies_names;
 	}
 }

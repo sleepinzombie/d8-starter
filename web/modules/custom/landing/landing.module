@@ -28,6 +28,11 @@ function landing_theme() {
         'variables' => [
           'slider_contents' => NULL,
         ],
-      ]
+      ],
+      'landing_taxonomy' => [
+        'variables' => [
+          'var' => NULL,
+        ],
+      ],
     ];
   }
