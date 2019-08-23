@@ -5,3 +5,6 @@ services:
   services.image_file_custom:
     class: Drupal\services\ImageFileService
     arguments: []
+  services.taxonomy_service:
+    class: Drupal\services\TaxonomyService
+    arguments: []
