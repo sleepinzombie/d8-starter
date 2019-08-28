@@ -49,6 +49,10 @@ class TaxonomyService {
 		return $taxonomies;
 	}
 
+	/**
+	 * Getting all taxonomies vocabularies titles
+	 * @return array List of taxonomy vocabularies
+	 */
 	public function get_taxonomy_vocabularies_names() {
 		$vocabularies = Vocabulary::loadMultiple();
 		kint($vocabularies);
