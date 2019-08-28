@@ -55,7 +55,6 @@ class TaxonomyService {
 	 */
 	public function get_taxonomy_vocabularies_names() {
 		$vocabularies = Vocabulary::loadMultiple();
-		kint($vocabularies);
 		$vocabularies_names = [];
 		foreach ($vocabularies as $vocabulary) {
 			array_push($vocabularies_names, $vocabulary->label());

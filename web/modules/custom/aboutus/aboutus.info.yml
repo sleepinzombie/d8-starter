@@ -1,0 +1,5 @@
+name: 'aboutus'
+type: module
+description: 'Module for the about us page.'
+core: 8.x
+package: 'Custom'

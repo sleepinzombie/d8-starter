@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains aboutus.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function aboutus_theme() {
+  return [
+    'aboutus' => [
+      'render element' => 'children',
+    ],
+  ];
+}
